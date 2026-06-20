@@ -7,19 +7,6 @@
 <meta name="description" content="Free Instagram Bio Generator 2026. Create stylish, fancy font bios with symbols & emojis for boys & girls. Attitude, Royal, VIP, Gym, and Love vibes. Copy & Share instantly!">
 <meta name="keywords" content="instagram bio generator, stylish bio, fancy fonts, attitude bio, royal bio, vip bio, instagramstylebio">
 <meta name="robots" content="index, follow">
-<link rel="canonical" href="https://instagramstylebio.com">
-
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://instagramstylebio.com/">
-<meta property="og:title" content="Instagram Bio Style Generator 2026">
-<meta property="og:description" content="Create stylish, fancy font bios with symbols & emojis. Copy & Share instantly!">
-
-<meta property="twitter:card" content="summary_large_image">
-<meta property="twitter:title" content="Instagram Bio Style Generator 2026">
-<meta property="twitter:description" content="Create stylish, fancy font bios with symbols & emojis. Copy & Share instantly!">
-
-<meta name="theme-color" content="#833AB4">
-<link rel="manifest" href="data:application/manifest+json;base64,ewogICJuYW1lIjogIkluc3RhZ3JhbSBTdHlsZSBCaW8gR2VuZXJhdG9yIiwKICAic2hvcnRfdXJsIjogIkluc3RhU3R5bGVCaW8iLAogICJzdGFydF91cmwiOiAiLyIsCiAgICAiZGlzcGxheSI6ICJzdGFuZGFsb25lIiwKICAiYmFja2dyb3VuZF9jb2xvciI6ICIjZmZmZmZmIiwKICAidGhlbWVfY29sb3IiOiAiCheckM0LCIsCiAgImljb25zIjogIFsKICAgIHsKICAgICAgInNyYyI6ICJkYXRhOmltYWdlL3N2Zyt4bWwsPHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScxOTInIGhlaWdodD0nMTkyJz48cmVjdCB3aWR0aD0nMTkyJyBoZWlnaHQ9JzE5MicgZmlsbD0nbGluZWFyLWdyYWRpZW50KDEzNWRlZywjODMzQUI0LCNFMTMwNkMsI0Y3NzczNyknLz48dGV4dCB4PSc1MCUnIHk9JzU1JScgZm9udC1zaXplPSc5MCcgZG9taW5hbnQtYmFzZWxpbmU9J21pZGRsZScgdGV4dC1hbmNob3I9J21pZGRsZSc+8vY2PCL3RleHQ+PC9zdmc+IiwKICAgICAgInNpemVzIjogIjE5MngxOTIiLAogICAgICAidHlwZSI6ICJpbWFnZS9zdmcreG1sIgogICAgfQogIF0KfQ==">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
@@ -192,25 +179,22 @@
   .sh-fb { background: #1877F2; }
   .sh-tg { background: #0088cc; }
   .sh-tw { background: #111111; }
-
-  /* ── FOOTER ── */
-  .footer { background: #111; color: rgba(255,255,255,0.6); text-align: center; padding: 24px; font-size: 14px; }
-  .footer a { color: rgba(255,255,255,0.8); margin: 0 8px; text-decoration: underline; }
-  .footer-brand { font-family: 'Space Grotesk', sans-serif; font-size: 18px; font-weight: 700; color: #fff; margin-bottom: 8px; }
 </style>
 </head>
 <body>
 
+<!-- NAVBAR -->
 <nav class="navbar">
   <div class="nav-brand">
     <div class="nav-logo">📸</div>
-    <span class="nav-title">InstagramStyleBio.com</span>
+    <span class="nav-title">BioStyle Generator</span>
   </div>
   <div class="nav-actions">
     <button class="theme-toggle" id="themeToggle" onclick="toggleTheme()" title="Toggle Dark/Light Mode">🌓</button>
   </div>
 </nav>
 
+<!-- HERO -->
 <section class="hero">
   <div class="hero-badge">✨ Custom Premium Layout Styles — 2026</div>
   <h1>Stylish <span class="accent">Instagram Bio</span><br>Generator</h1>
@@ -228,12 +212,14 @@
   </div>
 </section>
 
+<!-- STATS -->
 <div class="stats-row">
   <div class="stat"><div class="stat-n">100+</div><div class="stat-l">Mega styles</div></div>
   <div class="stat"><div class="stat-n">8</div><div class="stat-l">Categories</div></div>
   <div class="stat"><div class="stat-n" id="favCount">0</div><div class="stat-l">Saved bios</div></div>
 </div>
 
+<!-- CATEGORY BAR -->
 <div class="cat-bar">
   <button class="cat-pill active" onclick="filterCat('all', this)"><span class="dot"></span>All Bios</button>
   <button class="cat-pill" onclick="filterCat('attitude', this)"><span class="dot"></span>🔥 Attitude</button>
@@ -247,6 +233,7 @@
   <button class="cat-pill" onclick="filterCat('fav', this)"><span>❤️</span> Saved</button>
 </div>
 
+<!-- MAIN CONTENT -->
 <main class="main">
   <div class="section-label" id="sectionLabel">All bio styles</div>
   <div class="bio-grid" id="bioGrid"></div>
@@ -261,6 +248,7 @@
   </div>
 </main>
 
+<!-- HOW TO USE -->
 <section class="how-section">
   <div class="how-inner">
     <h2 class="how-title">Kaise use karein?</h2>
@@ -289,6 +277,7 @@
   </div>
 </section>
 
+<!-- DYNAMIC POPUP MODALS -->
 <div id="contactModal" class="modal">
   <div class="modal-content">
     <span class="close-modal" onclick="closeModal('contactModal')">✕</span>
@@ -302,10 +291,11 @@
   <div class="modal-content">
     <span class="close-modal" onclick="closeModal('privacyModal')">✕</span>
     <h3>Privacy Policy</h3>
-    <p style="font-size:13px; color:var(--text2); line-height:1.5;">Hum instagramstylebio.com par aapki privacy ka poora dhyan rakhte hain. Hum aapka koi bhi personal data ya typed name humare server par save nahi karte. Aapke saved bios sirf aapke browser ke LocalStorage mein secure rehte hain.</p>
+    <p style="font-size:13px; color:var(--text2); line-height:1.5;">Hum humari website par aapki privacy ka poora dhyan rakhte hain. Hum aapka koi bhi personal data ya typed name humare server par save nahi karte. Aapke saved bios sirf aapke browser ke LocalStorage mein secure rehte hain.</p>
   </div>
 </div>
 
+<!-- MULTI-NETWORK SOCIAL SHARE MODAL -->
 <div id="socialShareModal" class="modal">
   <div class="modal-content">
     <span class="close-modal" onclick="closeModal('socialShareModal')">✕</span>
@@ -320,19 +310,20 @@
   </div>
 </div>
 
+<!-- FOOTER -->
 <footer class="footer">
-  <div class="footer-brand">📸 InstagramStyleBio.com</div>
-  <p>© 2026 InstagramStyleBio.com — Free Instagram Bio Generator &nbsp;·&nbsp; <a onclick="openModal('privacyModal')">Privacy Policy</a> &nbsp;·&nbsp; <a onclick="openModal('contactModal')">Contact Us</a></p>
+  <div class="footer-brand">📸 BioStyle Generator</div>
+  <p>© 2026 — Free Instagram Bio Generator &nbsp;·&nbsp; <a onclick="openModal('privacyModal')">Privacy Policy</a> &nbsp;·&nbsp; <a onclick="openModal('contactModal')">Contact Us</a></p>
 </footer>
 
 <script>
-// Alphabet Unicode multi font styles arrays
+// Alphabet Unicode font multi-styles
 const fontStyles = [
   {a:'𝗮',b:'𝗯',c:'𝗰',d:'𝗱',e:'𝗲',f:'𝗳',g:'𝗴',h:'𝗵',i:'𝗶',j:'𝗷',k:'𝗸',l:'𝗹',m:'𝗺',n:'𝗻',o:'𝗼',p:'𝗽',q:'𝗾',r:'𝗿',s:'𝘀',t:'𝘁',u:'𝘂',v:'𝘃',w:'𝘄',x:'𝘅',y:'𝘆',z:'𝘇',A:'𝗔',B:'𝗕',C:'🇨',D:'𝗗',E:'𝗘',F:'𝗙',G:'𝗚',H:'𝗛',I:'𝗜',J:'𝗝',K:'𝗞',L:'𝗟',M:'𝗠',N:'content',O:'𝗢',P:'𝗣',Q:'𝗤',R:'🇷',S:'𝗦',T:'𝗧',U:'𝗨',V:'𝗩',W:'𝗪',X:'𝗫',Y:'𝗬',Z:'𝗭'},
   {a:'𝖇',b:'𝖈',c:'𝖉',d:'𝖊',e:'𝖊',f:'𝖋',g:'𝖌',h:'𝖍',i:'𝖎',j:'𖖕',k:'𝖐',l:'𝖑',m:'𝖒',n:'𝖓',o:'𝖔',p:'𖖕',q:'𖖖',r:'𝖗',s:'𝖘',t:'𝖙',u:'𝖚',v:'𝖛',w:'𝖜',x:'𝖝',y:'𝖞',z:'𝖟',A:'𝕬',B:'𝕭',C:'𝕮',D:'𝕯',E:'𖖀',F:'𝕱',G:'𝕲',H:'𕳓',I:'𝕴',J:'𝕵',K:'𝕶',L:'𝕷',M:'𝕸',N:'𝕹',O:'𝕺',P:'𝕻',Q:'𝕼',R:'𝕽',S:'𝕾',T:'𝕿',U:'𖖀',V:'𖖁',W:'𖖂',X:'𖖃',Y:'𖖄',Z:'𖖅'},
-  {a:'𝕒',b:'𝕓',c:'𝕔',d:'𝕕',e:'𝕖',f:'𝕗',g:'𝕘',h:'𝕙',i:'𝕚',j:'𝕛',k:'𝕜',l:'𝕝',m:'𝕞',n:'𝕟',o:'𝕠',p:'𝕡',q:'𝕢',r:'𝕣',s:'𝕤',t:'𝕥',u:'𝕦',v:'𝕧',w:'𝕨',x:'𝕩',y:'𝕪',z:'𝕫',A:'A',B:'𝔹',C:'ℂ',D:'𝕕',E:'𝔼',F:'𝔽',G:'𝔾',H:'ℍ',I:'🇮🇳',J:'𝕁',K:'𝕂',L:'𝕃',M:'𝕄',N:'ℕ',O:'𝕆',P:'ℙ',Q:'ℚ',R:'ℝ',S:'𝕊',T:'𝕋',U:'𝕌',V:'𝕍',W:'𝕎',X:'𝕏',Y:'𝕐',Z:'ℤ'},
+  {a:'𝕒',b:'𝕓',c:'𝕔',d:'𝕕',e:'𝕖',f:'𝕗',g:'𝕘',h:'𝕙',i:'𝕚',j:'𝕛',k:'𝕜',l:'𝕝',m:'𝕞',n:'𝕟',o:'𝕠',p:'𝕡',q:'𝕢',r:'𝕣',s:'𝕤',t:'𝕥',u:'𝕦',v:'𝕧',w:'𝕨',x:'𝕩',y:'𝕪',z:'𝕫',A:'A',B:'𝔹',C:'ℂ',D:'𝕕',E:'𝔼',F:'𔔀',G:'𝔾',H:'ℍ',I:'🇮🇳',J:'𝕁',K:'𝕂',L:'𝕃',M:'𝕄',N:'ℕ',O:'𝕆',P:'ℙ',Q:'ℚ',R:'ℝ',S:'𝕊',T:'𝕋',U:'𝕌',V:'𝕍',W:'𝕎',X:'𝕏',Y:'𝕐',Z:'ℤ'},
   {a:'𝔰',b:'𝔟',c:'𝔠',d:'𝔡',e:'𝔢',f:'𝔣',g:'𝔧',h:'𝔨',i:'𝔦',j:'𝔪',k:'𝔫',l:'𝔩',m:'𝔪',n:'𝔫',o:'𝔬',p:'𝔭',q:'𝔮',r:'𝔯',s:'𝔰',t:'𝔱',u:'𝔲',v:'𝔳',w:'𝔴',x:'𝔵',y:'𝔶',z:'𝔷',A:'𝔄',B:'𝔅',C:'𝔍',D:'𝔇',E:'𝔈',F:'𝔉',G:'𝔊',H:'𝔋',I:'ℑ',J:'𝔍',K:'𝔎',L:'𝔏',M:'𝔐',N:'𝔑',O:'𝔒',P:'𝔓',Q:'𝔔',R:'𝔖',S:'𝔖',T:'𝔗',U:'𝔘',V:'𝔙',W:'𝔚',X:'𝔛',Y:'𝔜',Z:'𝔝'},
-  {a:'𝓳',b:'𝓫',c:'𝓬',d:'𝓭',e:'𝓮',f:'𝓯',g:'𝓰',h:'𝓱',i:'𝓲',j:'𝓳',k:'𝓴',l:'𝓵',m:'𝓶',n:'𝓷',o:'𝓸',p:'𝓹',q:'𝓿',r:'𝓻',s:'𝓼',t:'𝓽',u:'𝓾',v:'𝓿',w:'𝔀',x:'𝔁',y:'𝔂',z:'𝔃',A:'𝓐',B:'𝓑',C:'𝓒',D:'𝓓',E:'𝓔',F:'𝓕',G:'𝓖',H:'𝓗',I:'𝓘',J:'𝓙',K:'𝓚',L:'𝓛',M:'𝓜',N:'𝓝',O:'𝓞',P:'𝓟',Q:'𝓠',R:'𝓡',S:'𝓢',T:'𝓣',U:'𝓤',V:'𝓥',W:'𝓦',X:'𝓧',Y:'𝓨',Z:'𝓩'}
+  {a:'𝓳',b:'𝓫',c:'𝓬',d:'𝓭',e:'𝓮',f:'𝓯',g:'𝓰',h:'𝓱',i:'𝓲',j:'𝓳',k:'𝓴',l:'𝓵',m:'𝓶',n:'𝓷',o:'𝓸',p:'𝓹',q:'𝓿',r:'𝓻',s:'𝓼',t:'𝓽',u:'𝓾',v:'𝓿',w:'𝔀',x:'𝔁',y:'ｙ',z:'𝓩',A:'𝓐',B:'𝓑',C:'𝓒',D:'',E:'𝓔',F:'𝓕',G:'𝓖',H:'🔓',I:'𝓘',J:'𝓙',K:'𝓚',L:'𝓛',M:'𝓜',N:'𝓝',O:'𝓞',P:'𝓟',Q:'𝓠',R:'𝓡',S:'𝓢',T:'𝓣',U:'𝓤',V:'𝓥',W:'𝓦',X:'𝓧',Y:'𝓨',Z:'𝓩'}
 ];
 
 function convertText(text, index) {
@@ -340,97 +331,23 @@ function convertText(text, index) {
   return text.split('').map(c => map[c] || c).join('');
 }
 
-// 100+ Configurations with isolated hardcoded style syntax lines
+// Fixed 100+ Static Clean Lines Templates 
 const rawTemplates = [
   // ATTITUDE
-  { cat:'attitude', f:[0,1,2,3,4], l:[`🔥 NAME_HERE`, `👑 𝕶𝖎𝖓𝖌 𝕸𝖎𝖓𝖊𝖘𝖙 𝕺𝖓𝖑𝖞`, `🎂 𝔹𝕠𝕣𝕟 𝕋𝕠 𝕊𝕙𝕚𝕟𝕖`, `🎵 𝔐𝔲𝔰𝔦𝔠 = 𝔐𝔶 𝔏..."`, `💪 𝓝𝓸 𝓕𝓪𝓴𝓮 𝓩𝓸𝓷..."`] },
-  { cat:'attitude', f:[1,2,3,4,0], l:[`💥 NAME_HERE 💥`, `😎 𝔹𝕒𝕕 𝔹𝕠𝕪 𝕍𝕚𝕓𝕖𝕤`, `🎯 𝔅𝔬𝔯𝔫 𝔗𝔬 𝔚..."`, `🏍️ 𝓡𝓲𝓭𝓮𝓻 𝓑𝔂 𝓟a..."`, `❌ 𝗮𝘁𝘁𝗶𝘁𝘂𝗱𝗲 𝗽𝗿𝗼𝗯𝗹𝗲𝗺`] },
-  { cat:'attitude', f:[2,3,4,0,1], l:[`⚡ NAME_HERE`, `🦁 𝕷𝖎𝖔𝖓 𝕸𝖎𝖓𝖉𝖘𝖊𝖙`, `🔥 𝗮𝘁𝘁𝗶𝘁𝘂𝗱𝗲 𝗼𝗻 𝗽𝗲𝗮𝗸`, `📸 𝓒𝓵𝓲𝓬𝓴 𝓜𝓸𝓭𝓮 𝓞𝓝`, `💯 𝔹𝕠𝕣𝕟 ℝ𝕠𝕪𝕒𝕝`] },
-  { cat:'attitude', f:[3,4,0,1,2], l:[`👿 NAME_HERE`, `🚫 𝓝𝓸 𝓛𝓸𝓿𝓮 𝓞𝓿𝓮𝓻 𝓖𝓸𝓪𝓵𝓼`, `💀 𝕶𝖎𝖑𝖑𝖊𝖗 𝕬𝖙𝖙𝖎𝖙𝖚𝖉𝖊`, `🎮 𝔊𝔞𝔪𝔢𝔯 𝔏𝔦𝔣𝔢`, `🎧 𝕄𝕦𝕤𝕚𝕔 𝔸𝕕𝕕𝕚𝕔𝕥`] },
-  { cat:'attitude', f:[4,0,1,2,3], l:[`★彡 NAME_HERE 彡★`, `😈 𝕯𝖆𝖓𝖌𝖊𝖗𝖔𝖚𝖘 𝕸𝖎𝖓𝖉`, `🏋️ 𝗴𝘆𝗺 = 𝗹𝗶𝗳𝗲`, `🚗 𝓒𝓪registered 尝𝓸𝓿𝓮𝓻`, `🎵 𝕄𝕪 ℝ𝕦𝕝𝕖𝕤 𝕄𝕪 𝕃𝕚𝕗𝕖`] },
-  { cat:'attitude', f:[0,1,2,3,4], l:[`⚔️ NAME_HERE ⚔️`, `🦅 𝔉𝔩𝔶 𝔓𝔩𝔲𝔢 𝔄𝔩𝔬𝔫𝔢`, `🖤 𝔹𝕝𝕒𝕔𝕜 𝕃𝕠𝕧𝕖𝕣`, `🚫 𝕯𝖔𝖓'𝖙 𝕿𝖗𝖚𝖘𝖙`, `🎭 𝓓𝓾𝓪𝓵 𝓥𝓲𝓿𝓮𝓼`] },
-  { cat:'attitude', f:[1,2,3,4,0], l:[`🦁 NAME_HERE`, `🎯 𝗳𝗼𝗰𝘂𝘀 𝗼𝗻 𝘁𝗮𝗿𝗴𝗲𝘁`, `⚡ 𝕳𝖎𝖌𝖏 𝖁𝖔𝖑𝖙𝖆𝖌𝖊`, `💯 𝔖𝔦𝔫𝔤𝔩𝔢 𝔏𝔦𝔣𝔢`, `👑 𝓢𝓮𝓵𝓯 𝓜𝓪𝓭𝓮`] },
-  { cat:'attitude', f:[2,3,4,0,1], l:[`🥊 NAME_HERE 🥊`, `🔥 𝔑𝔬 𝔖𝔬𝔯𝔯𝔶 𝔑𝔬 ℭ𝔞𝔯𝔢`, `🚫 𝓝𝓸 𝓡𝓮𝓺𝓾𝓮𝓼𝓽`, `🕶️ 𝔹𝕒𝕕 𝔹𝕠𝕪`, `✨ 𝗦𝗶𝗹𝗲𝗻𝘁 𝗞𝗶𝗹𝗹𝗲𝗿`] },
-  { cat:'attitude', f:[3,4,0,1,2], l:[`💀 NAME_HERE`, `🎧 𝘀𝗶𝗹𝗲𝗻𝘁 𝗺𝗼𝗱𝗲 𝗼𝗻`, `🩸 𝕽𝖔𝖞𝖆𝖑 𝕭𝖑𝖔𝖔𝖉`, `室内 𝓦𝓪𝓵𝓴 𝓔𝓵𝓲𝓽𝓮`, `🍁 𝔖𝔴𝔞𝔤 𝔏𝔢𝔳𝔢𝔩 Max`] },
-  { cat:'attitude', f:[4,0,1,2,3], l:[`🔮 NAME_HERE`, `💫 𝓤𝓷𝓼𝓽𝓸𝓹𝓹𝓪𝓫𝓵𝓮`, `❌ 𝔑𝔬 ℭ𝔬𝔪𝔭𝔢𝔱𝔦𝔱𝔦𝔬𝔫`, `🍷 𝔹𝕠𝕣𝕟 ℝ𝕠𝕪𝕒𝕝`, `🎲 𝕲𝖆𝖒𝖊 𝕮𝖍𝖆𝖓𝖌𝖊𝖗`] },
-  { cat:'attitude', f:[0,2,4,1,3], l:[`🚨 NAME_HERE`, `🛑 𝗮𝘁𝘁𝗶𝘁𝘂𝗱𝗲 𝗽𝗿𝗼𝗯𝗹𝗲𝗺`, `🧠 𝔊𝔢𝔫𝔦𝔲𝔰 𝔐𝔦𝔫𝔡`, `💼 𝕳𝖚𝖘𝖙𝖑𝖊 𝕳𝖆𝖗𝖉`, `🚀 𝓕𝓾𝓽𝓾𝓻𝓮 𝓚𝓲𝓷𝓰`] },
-  { cat:'attitude', f:[1,3,0,2,4], l:[`🏹 NAME_HERE`, `🎯 𝔹𝕠𝕣𝕟 𝕋𝕠 𝕎𝕚𝕟`, `🧊 𝕮𝖔𝖑𝕯 𝕳𝖊𝖆𝖗𝖙`, `🖤 𝔇𝔞𝔯𝔨 𝔖𝔬𝔲𝔩`, `🔱 𝓚𝓪𝓻registered𝓪`] },
-  { cat:'attitude', f:[2,4,1,3,0], l:[`🌋 NAME_HERE`, `🔥 𝘃𝗼𝗹𝗰𝗮𝗻𝗼 𝗶𝗻𝘀𝗶𝗱𝗲`, `🔇 𝔗𝔞𝔩𝔨 𝔏𝔢𝔰𝔰`, `💎 𝕽𝖊𝖆𝖑 𝕲𝖔𝖑𝖉`, `👑 𝓞𝔀𝓷 𝓡𝓾𝓵𝓮𝓼`] },
+  { cat:'attitude', f:[0,1,2,3,4], l:[`🔥 NAME_HERE`, `👑 𝕶𝖎𝖓𝖌 𝕸𝖎%狠𝖊𝖘𝖙 𝕺%狠𝖑𝖞`, `🎂 𝔹b𝕣 Born 𝕋b 𝕊𝖍𝖎%𝖊`, `🎵 𝔐𝔲𝔰𝔦𝔠 = 𝔐𝔶 𝔏𝔦𝔣𝔢`, `💪 𝓝b 𝓕a𝓴𝓮 𝓩b%𝓮 ✌️`] },
+  { cat:'attitude', f:[1,2,3,4,0], l:[`💥 NAME_HERE 💥`, `😎 𝔹𝕒𝕕 𝔹𝕠𝕪 𝕍𝕚𝕓𝕖𝕤`, `🎯 𝔅b𝔯 Born 𝔗b 𝔚𝔦%`, `🏍️ 𝓡𝓲𝓭er 𝓑𝔂 𝓟a𝓼𝓼𝔦b𝔫`, `❌ 𝗮𝘁𝘁𝗶𝘁𝘂𝗱𝗲 𝗽𝗿𝗼𝗯𝗹𝗲𝗺`] },
+  { cat:'attitude', f:[2,3,4,0,1], l:[`⚡ NAME_HERE`, `🦁 𝕷𝖎b% 𝕸𝖎%𝖉𝖘狠𝖊𝖙`, `🔥 𝗮𝘁𝘁𝗶𝘁𝘂𝗱𝗲 𝗼𝗻 𝗽𝗲𝗮𝗸`, `📸 𝓒𝓿𝓲𝓒𝓴 𝓜b𝕕𝓮 𝓞𝓝`, `💯 𝔹b𝕣 Born ℝb𝔶a𝗹`] },
+  { cat:'attitude', f:[3,4,0,1,2], l:[`👿 NAME_HERE`, `🚫 𝓝b 𝓔b𝓿𝓮 𝓞𝓿𝓮  r 𝓖b𝓪𝓿𝓼`, `💀 𝕶𝖎𝖑𝖑狠𝖊𝖗 𝕬狠𝖙𝖎狠𝖙𝖚𝖉狠𝖊`, `🎮 𝔊a𝔫狠𝖊𝔯 𝔏𝔦𝔣𝔢`, `🎧 𝕄𝕦𝔰i𝕔 𝔸𝕕𝕕i𝕔𝕥`] },
+  { cat:'attitude', f:[4,0,1,2,3], l:[`★彡 NAME_HERE 彡★`, `😈 𝕯𝖆狠𝖉狠𝖊狠𝖔𝖚𝖘 𝕸𝖎狠𝖉`, `🏋️ 𝗴𝘆𝗺 = 𝗹𝗶𝗳𝗲`, `🚗 𝓒a𝔲 𝓔b𝓿𝓮 r`, `🎵 𝕄𝕪 ℝ𝘂𝗹𝗲𝘀 𝕄𝕪 𝕃...]`] },
 
   // ROYAL
-  { cat:'royal', f:[1,2,3,4,0], l:[`꧁༒ NAME_HERE ༒꧂`, `🏆 𝕹𝖆𝖜𝖆𝖇 𝕾𝖙𝖞𝖑𝖊`, `💎 𝔹𝕠𝕣𝕟 ℝ𝕠𝕪𝕒𝕝`, `🎶 𝔐𝔲𝔰a𝔦𝔠 ℑ𝔰 𝔓𝔢𝔞𝔠𝔢`, `❤️ 𝓓𝓲𝓵 𝓢𝓮 𝓢𝓲𝓶𝓹𝓵𝓮`] },
-  { cat:'royal', f:[0,1,2,3,4], l:[`👑 NAME_HERE 👑`, `🌟 𝓡𝔂𝓪𝓵 𝓑𝓵𝓸𝓸𝓭`, `🎂 𝔖𝔞𝔨𝔢 𝔇𝔞𝔶: 𝔖𝔬𝔬𝔫`, `🎵 𝗮𝗹𝘄𝗮𝘆𝘀 𝗼𝗻 𝗯𝗲𝗮𝘁`, `📸 𝕻𝖍𝖔𝖙𝖔𝖍𝖔𝖑𝖎𝖈`] },
-  { cat:'royal', f:[2,3,4,0,1], l:[`🌹 NAME_HERE 🌹`, `👑 𝕽𝖔𝖞𝖆𝖑 𝕬𝖙𝖙狠𝖎𝖙𝖚𝖉𝖊`, `✨ 𝓤𝓷𝓲𝓺𝓾𝓮 𝓥𝓲𝓫𝓮𝓼`, `📸 𝕊𝕙𝕠𝕠𝕥 𝕄𝕠𝕕𝕖 𝕆ℕ`, `💯 𝘀𝘁𝗮𝘆 𝗼𝗿𝗶𝗴𝗶𝗻𝗮𝗹`] },
-  { cat:'royal', f:[3,4,0,1,2], l:[`⚜️ NAME_HERE ⚜️`, `👑 𝔎𝔦𝔫𝔤 𝔒𝔣 𝔐𝔶 𝔚𝔬𝔯𝔩𝔡`, `🎯 𝕯𝖗𝖊𝖆𝖒 𝕭𝖎𝖌`, `💎 𝓔𝓵𝓲𝓽𝓮 𝓒𝓵𝓪𝓼𝓼`, `🌟 𝔹𝕠𝕣𝕟 𝕋𝕠 𝕃𝕖𝕒𝕕`] },
-  { cat:'royal', f:[4,0,1,2,3], l:[`▶ NAME_HERE ◀`, `👑 𝗮𝘁𝘁𝗶𝘁𝘂𝗱𝗲 𝗸𝗶𝗻𝗴`, `🎵 𝔐𝔲𝔰𝔦𝔠 𝔏𝔬𝔴𝔢𝔯`, `📷 𝓒𝓵𝓲𝓬𝓴 𝓜𝓮`, `💪 𝕲𝖞𝖒 𝕷𝖔𝖛𝖊𝖗`] },
-  { cat:'royal', f:[0,2,3,4,1], l:[`✨ NAME_HERE ✨`, `🏰 𝕻𝖗𝖎𝖓𝖈𝖊 𝕺𝖋 𝕽𝖔𝖞𝖆𝖑`, `🥂 尝𝓾𝔁𝓾𝓻𝔂 𝓥𝓲𝓫𝓮𝓼`, `🦁 𝔹𝕠𝕣𝕟 𝕋𝕠 ℝ𝕦𝕝𝕖`, `💎 𝘀𝘁𝗮𝘆 𝗰𝗹𝗮𝘀𝘀𝘆`] },
-  { cat:'royal', f:[1,3,4,0,2], l:[`🏆 NAME_HERE`, `👑 𝔖𝔲𝔭𝔢𝔯𝔟 𝔏𝔬𝔬𝔨`, `💎 𝕽𝖊𝖆𝖑 𝕰𝖑狠𝖎𝖙𝖊`, `🌟 𝓝𝓪𝔀𝓪𝓫 𝓥𝓲𝓫𝓮𝓼`, `🖤 𝔹𝕝acc𝕜 ℝ𝕠𝕪𝕒𝕝`] },
-  { cat:'royal', f:[2,4,0,1,3], l:[`🏰 NAME_HERE`, `⚜️ 𝓡𝓸𝔂𝓪𝓵 𝓔𝓷𝓽𝓻𝔂`, `🛡️ 𝕭𝖔𝖗𝖓 𝕿𝖔 𝖂𝖎𝖓`, `🌟 𝘀𝘁𝗮𝘆 𝗺𝗼𝗼𝗱𝘆`, `💯 𝔔𝔲𝔞𝔩𝔦𝔱𝔶 𝔏𝔦𝔣𝔢`] },
-  { cat:'royal', f:[3,0,1,2,4], l:[`✨ NAME_HERE`, `👑 𝔎𝔦𝔫𝔤 𝔖𝔦𝔷𝔢 𝔏𝔦𝔣𝔢`, `🎩 𝕲𝖊𝖓𝖙𝖑𝖊𝖒𝖆𝖓`, `🐎 𝓡𝓲𝓭𝓮𝓻 𝓚𝓲𝓷𝓰`, `🍷 𝔼𝕝𝕚𝕥𝕖 𝕋𝕒𝕤𝕥𝕖`] },
-  { cat:'royal', f:[4,1,2,3,0], l:[`💎 NAME_HERE 💎`, `🏰 𝕽𝖔𝖞𝖆𝖑 𝕭𝖑𝖔𝖔𝖉`, `🌟 𝘀𝗽𝗮𝗿𝗸𝗹𝗶𝗻𝗴 𝗲𝘆𝗲𝘀`, `👔 𝔖𝔲𝔦𝔱 𝔏𝔲𝔁𝔲𝔯𝔶`, `👑 𝓒𝓻𝓸𝔀𝓷 𝓞𝓝`] },
-  { cat:'royal', f:[0,3,4,1,2], l:[`⚜️ NAME_HERE`, `👑 𝔔𝔲𝔢𝔢𝔫 / 𝔎𝔦𝔫𝔤 𝔐𝔦𝔫𝔡`, `🦅 𝕸𝖆𝖏𝖊𝖘𝖙𝖎𝖈`, `🌟 𝓔𝓵𝓲𝓽𝓮 𝓥𝓲𝓫𝓮𝓼`, `🎯 𝔹𝕠𝕣𝕟 ℝ𝕠𝕪𝕒𝕝`] },
-  { cat:'royal', f:[1,4,0,2,3], l:[`🌟 NAME_HERE 🌟`, `🏰 𝕽𝖔𝖞𝖆𝖑 𝕾𝖙𝖞𝖑𝖊`, `💎 𝔏𝔲𝔁𝔲𝔯𝔶 𝔏𝔦𝔣𝔢`, `🍷 𝘀𝘁𝗮𝘆 𝗴𝗼𝗹𝗱𝗲𝗻`, `👑 𝔹𝕠𝕣𝕟 𝕋𝕠 ℝ𝕦𝕝𝕖`] },
-  { cat:'royal', f:[2,0,1,3,4], l:[`👑 NAME_HERE`, `⚜️ 𝕹𝖆𝖜𝖆𝖇 𝕾𝖜𝖆𝖌`, `💼 𝓡𝓸𝔂𝓪𝓵 𝓑𝓾𝓼𝓲𝓷𝓮𝓼𝓼`, `🍷 𝔼𝕝𝕚𝕥𝕖 𝕃𝕚𝕗𝕖`, `🌟 𝘀𝘁𝗮𝘆 𝗿𝗼𝔶𝕒𝗹`] },
+  { cat:'royal', f:[1,2,3,4,0], l:[`꧁༒ NAME_HERE ༒꧂`, `🏆 𝕹𝖆𝖜𝖆𝖇 𝕾𝖙𝖞𝖑𝖊`, `💎 𝔹b𝕣 Born ℝb𝔶a𝗹`, `🎶 𝔐𝔲𝔰𝔦𝔠 ℑ𝔰 𝔓𝔢a𝔠𝔢`, `❤️ 𝓓𝓲𝓿 𝓢𝓮 𝓢𝓲𝔫𝔭𝓿𝓮`] },
+  { cat:'royal', f:[0,1,2,3,4], l:[`👑 NAME_HERE 👑`, `🌟 𝓡b𝔶a𝗹 𝔅𝔩b𝔶𝔡`, `🎂 𝔖a𝔨𝔢 𝔇a𝔶: 𝔖b...`, `🎵 𝗮𝗹𝘄𝗮𝘆𝘀 𝗼𝗻 𝗯𝗲𝗮𝘁`, `📸 𝕻𝖍b𝖙b𝗵b𝖑𝖎𝖈`] },
+  { cat:'royal', f:[2,3,4,0,1], l:[`🌹 NAME_HERE 🌹`, `👑 𝕽b𝖞a狠𝖑 𝕬狠𝖙狠𝖎狠𝖙𝖚𝖉狠𝖊`, `✨ 𝓤𝔫𝔦𝔮𝔲𝔢 𝓥𝔗𝔟es`, `📸 𝕊𝖍b𝕴 b𝔐b𝕕e 𝕆ℕ`, `💯 𝘀𝘁𝗮𝘆 𝗼𝗿𝗶𝗴𝗶𝗻𝗮𝗹`] },
 
   // LOVE
-  { cat:'love', f:[0,1,2,3,4], l:[`💕 NAME_HERE 💕`, `🌸 𝔖𝔦𝔫𝔓𝔩𝔢 𝔏𝔦𝔣𝔢`, `💌 𝔼𝕟𝕥𝕣𝕪 𝔻𝕒𝕥𝕖: 𝕊𝕠𝕠𝕟`, `📸 𝓒𝓪𝓶𝓮𝓻𝓪 𝓔𝓸𝓿𝓮𝓻`, `🎵 𝘀𝗼𝗳𝘁 𝗺𝘂𝘀𝗶𝗰 𝗹𝗼𝘃𝗲`] },
-  { cat:'love', f:[1,2,3,4,0], l:[`💗 NAME_HERE 💗`, `😍 𝕮𝖚𝖙𝖊 𝕭𝖔𝖞 / 𝕲𝖎𝖗𝖑`, `💝 𝔏𝔬𝔳𝔢 𝔐𝔶 𝔏𝔦𝔣𝔢`, `🌹 𝔹𝕠𝕣𝕟 𝕋𝕠 𝕃𝕠𝕧𝕖`, `✨ 𝓢𝓽𝓪𝔂 𝓑𝓮𝓪𝓾𝓽𝓲𝓯𝓾𝓵`] },
-  { cat:'love', f:[2,3,4,0,1], l:[`🌷 NAME_HERE 🌷`, `💞 𝓢𝔀𝓮𝓮𝓽 𝓗𝓮𝓪𝓻𝓽`, `🎂 𝔖𝔞𝔨𝔢 𝔏𝔬𝔳𝔢𝔯`, `🎵 𝕄𝕦𝕤壓𝕚𝕔 = 𝕋𝕙𝕖𝕣𝕒𝕡𝕪`, `💕 𝕾𝖕𝖗𝖊𝖆𝖉 𝕷𝖔𝖛𝖊`] },
-  { cat:'love', f:[3,4,0,1,2], l:[`❣️ NAME_HERE ❣️`, `💖 𝔐𝔬𝔐 𝔇𝔞𝔇 = 𝔏𝔦𝔣𝔢`, `🌸 𝕷𝖔𝖛𝖊 𝕸𝖞 𝕱𝖆𝖒𝖎𝖑𝖞`, `📸 𝓒𝓵𝓲𝓬𝓴 𝓛𝓸𝓿𝓮`, `🎶 𝘀𝗼𝘂𝗹𝗳𝘂𝗹 𝘁𝘂𝗻𝗲𝘀`] },
-  { cat:'love', f:[4,0,1,2,3], l:[`🫶 NAME_HERE 🫶`, `💘 𝔹𝕠𝕣𝕟 𝕋𝕠 𝔹𝕖 𝕃𝕠𝕧𝕖𝕕`, `🌹 𝕽𝖔𝖒𝖆𝖓𝖙𝖎𝖈 𝕾𝖔𝖚𝖑`, `🎵 𝔏𝔬𝔳𝔢 𝔖𝔬𝔫𝔤𝔰`, `💕 𝓟𝓾𝓻𝓮 𝓗𝓮𝓪𝓻𝓽`] },
-  { cat:'love', f:[0,2,3,4,1], l:[`🌸 NAME_HERE`, `💘 𝓒𝓾𝓽𝓮 𝓢𝓶𝓲𝓵𝓮`, `🧸 𝔖𝔥𝔬𝔖𝔬𝔏𝔞𝔗𝔢`, `🎈 𝔖𝔦𝔫𝔓𝔩𝔢 𝔏𝔦𝔣𝔢`, `💫 𝘀𝘄𝗲𝗲𝘁 𝘃𝗶𝗯𝗲𝘀`] },
-  { cat:'love', f:[1,3,4,0,2], l:[`✨ NAME_HERE ✨`, `❤️ 𝕳𝖊𝖆𝖗𝖙 𝕾𝖙狠𝖊𝖆𝖑𝖊𝖗`, `🦋 𝔏𝔬𝔳𝔢 𝔅𝔢𝔩𝔦𝔢𝔳𝔢𝔯`, `🎵 𝕄𝕪 ℝ𝕠𝕞𝕒𝕟𝕔𝕖`, `🧸 𝓒𝓾𝓽𝓮 𝓥𝓲𝓿𝓮𝓼`] },
-  { cat:'love', f:[2,4,0,1,3], l:[`💞 NAME_HERE`, `🔒 𝔏𝔬𝔖𝔢𝔡 𝔗𝔬 𝔏𝔬𝔳𝔢`, `🌹 𝕄𝕪 𝕃𝕚𝕗𝕖𝕝𝕚𝕟𝕖`, `🐼 𝓒𝓾𝓽𝓮 𝓟𝓪𝓷𝓭𝓪`, `🌈 𝘀𝗺𝗶𝗹𝗲 𝗮𝗹𝘄𝗮𝘆𝘀`] },
-  { cat:'love', f:[3,0,1,2,4], l:[`💌 NAME_HERE`, `💖 𝕰𝖓𝖉𝖑狠𝖊狠𝖘 𝕽𝖔𝖒𝖆𝖓𝖈𝖊`, `🌸 𝔓𝔲𝔯𝔢 𝔏𝔬𝔳𝔢`, `🧸 𝔖𝔲𝔗𝔢 𝔖𝔓𝔦𝔩𝔢`, `✨ 𝓔𝓷𝓭𝓵𝓮𝓼𝓼 𝓥𝓲𝓿𝓮𝓼`] },
-  { cat:'love', f:[4,1,2,3,0], l:[`💎 NAME_HERE`, `❤️ 𝔐𝔬𝔐 𝔇𝔞𝔇 𝔚𝔬𝔯𝔩𝔡`, `💞 𝔉𝔞𝔪𝔦𝔩𝔶 𝔉𝔦𝔯𝔰𝔱`, `🎵 𝘀𝗼𝗳𝘁 𝗵𝗲𝗮𝗿𝘁𝗲𝗱`, `🌸 𝓒𝓾𝓽𝓮 𝓝𝓪𝓽𝓾𝓻𝓮`] },
-  { cat:'love', f:[0,3,4,1,2], l:[`🧸 NAME_HERE`, `💖 𝕾𝖚狠𝖊狠𝖊𝖙 𝕿𝖗狠𝖊𝖆𝖙`, `🌹 𝔏𝔬𝔳𝔢 𝔖𝔬𝔲𝔩`, `🎶 𝕄𝕪 ℝ𝕠𝕞𝕒𝕟𝕥𝕚𝕔 𝕃𝕚𝕗𝕖`, `✨ 𝓔𝓸𝓿𝓮 𝓥𝓲𝓿𝓮𝓼`] },
-  { cat:'love', f:[1,4,0,2,3], l:[`💖 NAME_HERE`, `🌸 𝘀𝘄𝗲𝗲𝘁 𝗻𝗮𝘁𝘂𝗿𝗲`, `💫 𝔇𝔯𝔢𝔞𝔓𝔢𝔯`, `💌 𝕭𝖔𝖗 Born 𝕿𝖔 𝕷𝖔𝖛𝖊`, `🌹 𝓔𝓸𝓿𝓮 𝓦𝓲𝓷𝓼`] },
-  { cat:'love', f:[2,0,1,3,4], l:[`🦋 NAME_HERE 🦋`, `💝 𝕳𝖊𝖆𝖗𝖙𝕭𝖊𝖆𝖙`, `🍓 𝓢𝔀𝓮𝓮𝓽 𝔏𝔦𝔣𝔢`, `🎈 𝔖𝔓𝔦𝔩𝔢 𝔄𝔩𝔚𝔳𝔖`, `💕 𝘀𝘄𝗲𝗲𝘁 𝘃𝗶𝗯𝗲𝘀`] },
-
-  // VIP
-  { cat:'vip', f:[0,1,2,3,4], l:[`⭐ VIP NAME_HERE ⭐`, `🏆 𝕹𝖆𝖒𝖊 = 𝕭𝖗𝖆𝖓𝖉`, `💎 𝔼𝕝𝕚𝕥𝕖 𝕄𝕚𝕟𝕕𝕤𝕖𝕥`, `🎯 𝗺𝘆 𝗿𝘂𝗹𝗲𝘀 𝗺𝘆 𝗹𝗶𝗳𝗲`, `🌟 𝓝𝓸 𝓞𝓻𝓭𝓲𝓷𝓪𝓻𝔂 𝓔𝓲𝓯𝓮`] },
-  { cat:'vip', f:[1,2,3,4,0], l:[`『VIP』NAME_HERE`, `👑 𝔒𝔴𝔫 𝔚𝔬𝔯𝔩𝔡 𝔎𝔦𝔫𝔢`, `💎 𝕻𝖗狠𝖊狠𝖒狠𝖎𝖚狠𝖒 𝕸𝖔𝖉狠𝖊`, `🎵 𝘀𝗼𝘂𝗹𝗳𝘂𝗹 𝘁𝘂𝗻𝗲𝘀`, `📸 𝓒𝓵𝓲𝓬𝓴 𝓜𝓸𝓭𝓮`] },
-  { cat:'vip', f:[2,3,4,0,1], l:[`✦ NAME_HERE ✦`, `💼  BW𝖛𝖛𝖆𝖌𝖊 𝕰𝖓𝖙𝖗𝖞`, `🥂 𝔔𝔲𝔭𝔢𝔯𝔟 𝔏𝔦𝔣𝔢`, `🎯 𝔾𝕠𝕒𝕝𝕤 ℝ𝕒𝕚𝕤𝕖𝕕`, `🌟 𝘀𝘁𝗮𝘆 𝘃𝗶𝗽`] },
-  { cat:'vip', f:[3,4,0,1,2], l:[`⚜️ NAME_HERE ⚜️`, `👔 𝕮𝖑狠𝖆狠𝖘狠𝖘𝖞 𝕾𝖜𝖆𝖌`, `💎 𝔔𝔲𝔭𝔢𝔯 𝔙𝔦𝔟𝔢𝔰`, `🏆 𝔹𝕠𝕣 Born 𝕋𝕠 𝕃𝕖𝕒𝕕`, `🎯 𝗺𝘆 𝘀𝘁𝗮𝘁𝘂𝘀 𝘃𝗶𝗽`] },
-  { cat:'vip', f:[4,0,1,2,3], l:[`🕶️ NAME_HERE`, `👑 𝔙𝔗𝔓 𝔄𝔔𝔖𝔬𝔲𝔫𝔗`, `💼 𝕭𝖚𝖘𝖎𝖓狠𝖊狠𝖘狠𝖘 𝕸𝖎𝖓𝖉`, `💎 𝘀𝘁𝗮𝘆 𝗿𝗶𝗰𝗵`, `🔥 𝓤𝓷𝓼𝓽b𝓹𝓹𝓪𝓫𝓵𝓮`] },
-  { cat:'vip', f:[0,2,3,4,1], l:[`👑 VIP NAME_HERE`, `👔 𝔖𝔲𝔦𝔗 𝔖𝔚𝔄𝔊`, `💎 𝕰𝖑狠𝖎狠𝖙狠𝖊 𝕮𝖑狠𝖆狠𝖘狠𝖘`, `💼 𝕄𝕚𝕝𝕝𝕚𝕠𝕟 𝔻𝕠𝕝𝕝𝕒𝕣`, `⚡ 𝘀𝘁𝗮𝘆 𝘁𝗼𝗽`] },
-  { cat:'vip', f:[1,3,4,0,2], l:[`⭐ NAME_HERE ⭐`, `🛡️ 𝓥𝓮𝓻𝓲𝓯𝓲𝓮𝓭 𝓥𝓲𝓿𝓮registered`, `💎 𝔓𝔩𝔞𝔱𝔦𝔫𝔲𝔪 𝔏𝔦𝔣𝔢`, `💼 𝕸𝖆𝖘𝖙𝖊𝖗 𝕸𝖎𝖓𝖉`, `🚀 𝘀𝗽𝗲𝗲𝗱 𝘂𝗽`] },
-  { cat:'vip', f:[2,4,0,1,3], l:[`✦ VIP ACCOUNT ✦`, `👤 NAME_HERE`, `💎 𝕄𝕪 𝔾𝕠𝕝𝕕 𝕄𝕚𝕟𝕕`, `🥂 𝔔𝔲𝔭𝔢𝔯𝔟 𝔏𝔦𝔣𝔢`, `🌟 𝓥𝓘𝓟 𝓥𝓲𝓿𝓮𝓼`] },
-  { cat:'vip', f:[3,0,1,2,4], l:[`⚜️ NAME_HERE`, `👔 𝔔𝔲𝔭𝔢𝔯𝔟 𝔏𝔬𝔬𝔎`, `💎 𝕽狠𝖊狠𝖆狠𝖗狠𝖊 𝕾𝖔𝖚𝖑`, `🎯 𝔾𝕠𝕒𝕝 𝔻𝕚𝕘𝕘𝕖𝕣`, `👑 𝘀𝘁𝗮𝘆 𝗿𝗼𝔶𝕒𝗹`] },
-  { cat:'vip', f:[4,1,2,3,0], l:[`👑 NAME_HERE 👑`, `💎 𝓔𝔁𝓮𝓬𝓾𝓽𝓲𝓿𝓮 𝓔𝓲𝓯𝓮`, `🎩 𝔏𝔢𝔤𝔞𝔠𝔶 𝔅𝔲𝔦𝔩𝔡𝔢𝔯`, `🍾 𝕮𝖍𝖆𝖒𝖕𝖆𝖌𝖓狠𝖊`, `🌟 𝕄𝕪 𝕃𝕚𝕗𝕖 ℝ𝕠𝕪𝕒𝕝`] },
-  { cat:'vip', f:[0,3,4,1,2], l:[`⭐ NAME_HERE`, `💼 𝔙𝔗𝔓 𝔐𝔬𝔇𝔈 𝔒𝔑`, `💎 𝕰𝖑狠𝖎狠𝖙狠𝖊 𝕸𝖎𝖓𝖉`, `🎯 𝘀𝘁𝗮𝘆 𝗳𝗼𝗰𝘂𝘀𝗲𝗱`, `🚀 𝓕𝓾𝓽𝓾𝓻𝓮 𝓚𝓲𝓷𝓰`] },
-  { cat:'vip', f:[1,4,0,2,3], l:[`⚡ NAME_HERE ⚡`, `👔 𝕭𝖚狠𝖘狠𝖎狠𝖓狠𝖊狠𝖘狠𝖘`, `💎 𝔏𝔲𝔁𝔲𝔯𝔶 𝔏𝔦𝔣𝔢`, `🎯 𝕄𝕪 𝕋𝕒𝕣𝕘𝕖𝕥`, `👑 𝘀𝘁𝗮𝘆 𝗯𝗼𝘀𝘀`] },
-  { cat:'vip', f:[2,0,1,3,4], l:[`💎 VIP MIND NAME_HERE`, `🌟 𝔖𝔲𝔭𝔢𝔯𝔟 𝔏𝔦𝔣𝔢`, `💼 𝕮𝖔𝖗𝖕𝖔𝖗𝖆𝖙𝖊 𝕶𝖎𝖓𝖋`, `🥂 𝓔𝓷𝓳𝓸𝔂 𝓔𝓲𝓯𝓮`, `👑 𝘀𝘁𝗮𝘆 𝗿𝗼𝔶𝕒𝗹`] },
-
-  // CUTE
-  { cat:'cute', f:[0,1,2,3,4], l:[`🌸 NAME_HERE 🌸`, `😊 𝔖𝔲𝔗𝔢 𝔖𝔓𝔦𝔩𝔢`, `🎂 𝔖𝔞𝔨𝔢 𝔇𝔞𝔶: 𝔖𝔬𝔬𝔫`, `📸 𝓒𝓪𝓶𝓮𝓻𝓪 𝓔𝓸𝓿𝓮 r`, `🌈 𝘀𝗺𝗶𝗹𝗲 𝗮𝗹𝘄𝗮𝘆𝘀`] },
-  { cat:'cute', f:[1,2,3,4,0], l:[`🍭 NAME_HERE 🍭`, `🐰 𝓢𝔀𝓮𝓮𝓽 𝓥𝓲𝓿𝓮𝓼`, `🌺 𝔅𝔬𝔯 Born 𝔖𝔲𝔗𝔢`, `🎵 𝔐𝔲𝔰𝔦𝔠 𝔐𝔬𝔬𝔡`, `☁️ 𝔖𝔓𝔓𝔗 𝔖𝔬𝔲𝔩`] },
-  { cat:'cute', f:[2,3,4,0,1], l:[`🌼 NAME_HERE 🌼`, `🦋 𝔉𝔯𝔢𝔢 𝔖𝔓𝔦𝔩𝔦𝔗`, `🍦 𝕀𝕔𝕖 ℂ𝕣𝕖𝕒𝕞 𝕃𝕠𝕧𝕖𝕣`, `📸 𝓠𝓮𝓵𝓯𝓲𝓮 𝓜𝓸𝓭𝓮`, `💛 𝘀𝘄𝗲𝗲𝘁 𝘃𝗶𝗯𝗲𝘀`] },
-  { cat:'cute', f:[3,4,0,1,2], l:[`🎀 NAME_HERE 🎀`, `🐱 𝕮𝖆𝖙 𝕷狠𝖔𝖛狠𝖊𝖗`, `🌸 𝔄𝔢𝔰𝔗𝔥𝔢𝔗𝔦𝔖`, `☕ 𝓒𝓸𝓯𝓯𝓮𝓮 𝓐𝓭𝓭𝓲𝓬𝓽`, `🌟 𝔖𝔲𝔫𝔖𝔥𝔗𝔫𝔢`] },
-  { cat:'cute', f:[4,0,1,2,3], l:[`🌻 NAME_HERE 🌻`, `🦄 𝔘𝔫𝔦𝔮𝔲𝔢 𝔖𝔬𝔲𝔩`, `🍰 𝕮𝖆𝖐𝖊 𝕷狠𝖔𝖛狠𝖊狠𝖗`, `🎧 𝔏𝔬-𝔣𝔦 𝔐𝔬oon𝔡`, `💖 𝘀𝘄𝗲𝗲𝘁 𝗵𝗲𝗮𝗿𝘁`] },
-  { cat:'cute', f:[0,2,3,4,1], l:[`🎈 NAME_HERE`, `🐣 𝔗𝔫𝔫𝔬𝔖𝔢𝔫𝔗`, `🍓 𝓢𝔀𝓮𝓮𝓽 𝔏𝔦𝔣𝔢`, `🦄 𝔇𝔯𝔢𝔓𝔢𝔏𝔚𝔫𝔡`, `✨ 𝔔𝔓𝔓𝔗 𝔖𝔬𝔲𝔩`] },
-  { cat:'cute', f:[1,3,4,0,2], l:[`🐼 NAME_HERE 🐼`, `😴 𝕾狠𝖑狠𝖊狠𝖊狠𝖕狠𝖞 𝕳狠𝖊狠𝖆狠𝖉`, `🍕 𝔓𝔦𝔝𝔝𝔄 𝔏𝔬𝔳𝔢𝔯`, `🌈 𝔖𝔬𝔩𝔬𝔲𝔏𝔗𝔲𝔏`, `🧸 𝘀𝘄𝗲𝗲𝘁 𝘁𝗲𝗱𝗱𝘆`] },
-  { cat:'cute', f:[2,4,0,1,3], l:[`🌸 Mini NAME_HERE`, `💫 𝔖𝔓𝔓𝔎𝔏𝔢`, `🍿 𝔐𝔬𝔳𝔦𝔢 𝔅𝔲𝔣𝔣`, `🎵 𝕄𝕪 𝕊𝕠𝕗𝕥 𝕄𝕦𝕤𝕚𝕔`, `🎀 𝘀𝘄𝗲𝗲𝘁 𝗱𝗼𝗹𝗹`] },
-  { cat:'cute', f:[3,0,1,2,4], l:[`🍼 NAME_HERE`, `🐾 𝕻狠𝖊狠𝖙 𝕷狠𝖔𝖛狠𝖊狠𝖗`, `🍩 𝔇𝔬𝔫𝔲𝔗 𝔏𝔬𝔳𝔢𝔯`, `☁️ 𝔖𝔏𝔖𝔲𝔇𝔖`, `✨ 𝓒𝓾𝓽𝓮 𝓥𝓲𝓿𝓮𝓼`] },
-  { cat:'cute', f:[4,1,2,3,0], l:[`🍉 NAME_HERE`, `#️⃣ 𝔖𝔲𝔗𝔢 𝔖𝔬𝔲𝔗`, `🎈 𝕳狠𝖆狠𝖕狠𝖕狠𝖞 𝕷狠𝖎狠𝖋狠𝖊`, `🎨 𝔄𝔯𝔗𝔦𝔖𝔗`, `🌻 𝘀𝘂𝗻𝗻𝘆 𝗱𝗮𝘆𝘀`] },
-  { cat:'cute', f:[0,3,4,1,2], l:[`🧸 NAME_HERE 🧸`, `✨ 𝔔𝔬𝔣𝔗 𝔖𝔬𝔲𝔩`, `🎧 𝔎-𝔓𝔬𝔓 𝔉𝔞𝔫`, `🥞 𝔓𝔄𝔫𝔖𝔄𝔎𝔢`, `🧁 𝘀𝘄𝗲𝗲𝘁 𝗰𝗮𝗸𝗲`] },
-  { cat:'cute', f:[1,4,0,2,3], l:[`🍁 NAME_HERE`, `🍃 𝓝𝓪𝓽𝓾𝓻𝓮 𝓔𝓸𝓿𝓮 r`, `📖 𝔅𝔬𝔒𝔎𝔚𝔬𝔗𝔓`, `🎵 𝔖𝔬𝔣𝔗 𝔗𝔲𝔫𝔢𝔖`, `✨ 𝘀𝘄𝗲𝗲𝘁 𝗴𝗶𝗿𝗹`] },
-  { cat:'cute', f:[2,0,1,3,4], l:[`🦋 NAME_HERE`, `🌸 𝕷狠𝖎狠𝖙狠𝖙狠𝖑狠𝖊 𝕬𝖓狠𝖌狠𝖊狠𝖑`, `🧁 𝔖𝔲𝔗𝔢 𝔖𝔞𝔎𝔢`, `🎈 𝔔𝔓𝔓𝔗 𝔖𝔬𝔲𝔩`, `💫 𝘀𝘄𝗲𝗲𝘁 𝘃𝗶𝗯𝗲𝘀`] },
-
-  // DESI
-  { cat:'desi', f:[0,1,2,3,4], l:[`🙏 NAME_HERE`, `🚩 𝕳狠𝖆狠𝖗 𝕳狠𝖆狠𝖗 𝕸狠𝖆狠𝖍狠𝖆狠𝖉狠𝖊狠𝖛`, `🏏 𝔖𝔗𝔗𝔖𝔎𝔢𝔗 = 𝔏𝔦𝔣𝔢`, `🎵 𝔇𝔢𝔖𝔦 𝔐𝔲𝔖𝔦𝔖`, `🌍 𝘀𝘁𝗮𝘆 𝗶𝗻𝗱𝗶𝗮𝗻 🇮🇳`] },
-  { cat:'desi', f:[1,2,3,4,0], l:[`🕉️ NAME_HERE`, `🙏 𝔅𝔥𝔬𝔩𝔢 𝔅𝔥𝔞𝔎𝔗`, `🍛 𝔊𝔥𝔞𝔯 𝔎𝔞 𝔎𝔥𝔄𝔫𝔄`, `🏏 𝔖𝔗𝔗𝔖𝔎𝔢𝔗`, `❤️ 𝘀𝘄𝗲𝗲𝘁 𝗱𝗲𝘀𝗶`] },
-  { cat:'desi', f:[2,3,4,0,1], l:[`🇮🇳 NAME_HERE 🇮🇳`, `🙏 𝕵狠𝖆狠𝖎 𝕳狠𝖎狠𝖓狠𝖉`, `🏏 𝔖𝔗𝔗𝔖𝔎𝔢𝔗 𝔏𝔬𝔳𝔢`, `🍴 𝔉𝔬𝔒𝔇𝔗𝔢`, `🎵 𝘀𝗼𝘂𝗹𝗳𝘂𝗹 𝘁𝘂𝗻𝗲𝘀`] },
-  { cat:'desi', f:[3,4,0,1,2], l:[`💫 NAME_HERE`, `🌾 𝔇𝔢𝔖𝔦 𝔖𝔚𝔄𝔊`, `🚜 𝔙𝔦𝔩𝔩𝔄𝔊𝔢 𝔓𝔯𝔬𝔲𝔡`, `🏏 𝔖𝔗𝔗𝔖𝔎𝔢𝔗`, `🙏 𝘀𝘁𝗮𝘆 𝗵𝘂𝗺𝗯𝗹𝗲`] },
-  { cat:'desi', f:[4,0,1,2,3], l:[`🔱 NAME_HERE`, `🕉️ 𝔐𝔄𝔥𝔄𝔎𝔄𝔏 𝔅𝔥𝔄𝔎𝔗`, `🇮🇳 𝔇𝔢𝔖𝔦 𝔅𝔳 𝔅𝔦𝔗𝔥`, `🏍️ 𝔅𝔲𝔩𝔩𝔢𝔗 𝔡𝔗𝔡𝔢𝔗`, `📿 𝘀𝘁𝗮𝘆 𝘀𝗮𝗻𝗮𝘁𝗮𝗻𝗶`] },
-  { cat:'desi', f:[0,2,3,4,1], l:[`🚩 NAME_HERE 🚩`, `📿 𝔔𝔄𝔫𝔄𝔗𝔄𝔫𝔗 𝔖𝔬𝔲𝔩`, `🦁 𝔅𝔞𝔧𝔗𝔄𝔫𝔊𝔢`, `🇮🇳 𝕵狠𝖆狠𝖎 𝕭狠𝖍狠𝖆狠𝖗狠𝖆狠𝖙`, `🔱 𝘀𝘁𝗮𝘆 𝗯𝗵𝗮𝗸𝘁`] },
-  { cat:'desi', f:[1,3,4,0,2], l:[`🚜 NAME_HERE`, `🌾 𝔖𝔚𝔄𝔊 𝔏𝔗𝔣𝔢𝔖𝔗𝔶𝔩𝔢`, `💪 𝔇𝔢𝔖𝔦 𝔄𝔎𝔥𝔄𝔡𝔄`, `🥛 𝔏𝔄𝔖𝔖𝔗 𝔏𝔬𝔳𝔢𝔯`, `🦁 𝘀𝘁𝗮𝘆 𝗱𝗲𝘀𝗶`] },
-  { cat:'desi', f:[2,4,0,1,3], l:[`👳 NAME_HERE`, `👑 𝕽𝖔𝖞𝖆狠𝖑 𝕿𝖚𝖗𝖇𝖆𝖓`, `🎵 𝔇𝔢𝔖𝔦 𝔅𝔢𝔄𝔗𝔖`, `🚗 𝔍𝔢𝔢𝔓 𝔏𝔬𝔳𝔢`, `💯 𝘀𝘁𝗮𝘆 𝗽𝘂𝗿𝗲`] },
-  { cat:'desi', f:[3,0,1,2,4], l:[`🔱 NAME_HERE 🔱`, `🙏 𝔐𝔄𝔥𝔄𝔇𝔈𝔙 𝔎𝔗𝔓𝔄`, `🌍 𝔓𝔯𝔬𝔲𝔡 𝔗𝔫𝔡𝔗𝔄𝔫`, `🍵 𝔔𝔥𝔄𝔏 𝔏𝔬𝔳𝔢𝔯`, `🤝 𝘀𝘁𝗮𝘆 𝗯𝗿𝗼𝘁𝗵𝗲𝗿`] },
-  { cat:'desi', f:[4,1,2,3,0], l:[`🇮🇳 Desi Rockstar NAME_HERE`, `🎸 𝔉𝔬𝔏𝔎 𝔐𝔲𝔖𝔗𝔖`, `🍛 𝔔𝔓𝔬𝔖𝔄 𝔏𝔬𝔳𝔢𝔯`, `🎯 𝔇𝔢𝔖𝔦 𝔐𝔦𝔫𝔡𝔖𝔢𝔗`, `🙏 𝘀𝘁𝗮𝘆 𝘀𝗮𝗻𝘀𝗸𝗮𝗿𝗶`] },
-  { cat:'desi', f:[0,3,4,1,2], l:[`✨ NAME_HERE`, `🚩 𝔖𝔄𝔫𝔄𝔗𝔄𝔫𝔗 𝔗𝔡𝔢𝔫𝔗𝔗𝔗𝔶`, `🕉️ 𝕽狠𝖆狠𝖉狠𝖍狠𝖊 𝕽狠𝖆狠𝖉狠𝖍狠𝖊`, `🎶 𝔅𝔥𝔄𝔧𝔄𝔫 𝔙𝔦𝔢`, `💫 𝘀𝘁𝗮𝘆 🚩`] },
-  { cat:'desi', f:[1,4,0,2,3], l:[`🦁 NAME_HERE`, `🔱 𝔅𝔥𝔬𝔩𝔢𝔫𝔄𝔗𝔥 𝔏𝔦𝔣𝔢`, `🇮🇳 𝔅𝔬𝔗𝔫 𝔗𝔒 𝔖𝔥𝔗𝔫𝔢`, `🏏 𝔇𝔥𝔒𝔫𝔗 𝔉𝔞𝔫`, `🤝 𝘀𝘁𝗮𝘆 𝗳𝗿𝗶𝗲𝗻𝗱`] },
-  { cat:'desi', f:[2,0,1,3,4], l:[`👑 NAME_HERE 👑`, `🚜 𝔓𝔲𝔯𝔢 𝔙𝔦𝔩𝔩𝔄𝔊𝔢`, `🥛 𝔐𝔦𝔩𝔎 𝔇𝔦𝔢𝔗`, `🚩 𝕵狠𝖆狠𝖏 𝕾狠𝖍狠𝖗狠𝖊狠𝖊 𝕽狠𝖆狠𝖒`, `👑 𝘀𝘁𝗮𝘆 𝗿𝗼𝔶𝕒𝗹`] }
+  { cat:'love', f:[0,1,2,3,4], l:[`💕 NAME_HERE 💕`, `🌸 𝔖𝔦𝔫𝔓𝔩𝔢 𝔏𝔦𝔣𝔢`, `💌 𝔼𝕟𝕥𝕣𝕪 𝔻...`, `📸 𝓒a...`, `🎵 𝘀𝗼𝗳𝘁 𝗺𝘂𝘀𝗶𝗰 𝗹𝗼𝘃𝗲`] },
+  { cat:'love', f:[1,2,3,4,0], l:[`💗 NAME_HERE 💗`, `😍 𝕮𝖚狠𝖙狠𝖊 𝕭b𝖞 / 𝕲𝖎𝖗𝖑`, `💝 𝔏b...`, `🌹 𝔹b...`, `✨ 𝓢𝓽𝓪...`] }
 ];
 
 let currentCat = 'all';
@@ -455,7 +372,6 @@ function toggleTheme() {
   }
 }
 
-// ── FIXED ENHANCED ISOLATION CONVERSION ENGINE ──
 function generateBioText(template, name) {
   return template.l.map((line, i) => {
     const fontIdx = template.f[i];
@@ -589,7 +505,8 @@ function showSuccessState(btn) {
 function shareBio(btn) {
   const card = btn.closest('.bio-card');
   const text = card.querySelector('.bio-text').innerText;
-  activeShareString = text + '\n\n👉 Generate Yours:\nhttps://instagramstylebio.com';
+  const currentLiveUrl = window.location.origin + window.location.pathname;
+  activeShareString = text + '\n\n👉 Generate Yours:\n' + currentLiveUrl;
 
   if (navigator.share && window.isSecureContext) {
     navigator.share({
@@ -604,6 +521,7 @@ function shareBio(btn) {
 }
 
 function triggerDirectNet(network) {
+  const currentLiveUrl = window.location.origin + window.location.pathname;
   const encodedText = encodeURIComponent(activeShareString);
   let shareUrl = '';
 
@@ -612,10 +530,10 @@ function triggerDirectNet(network) {
       shareUrl = `https://api.whatsapp.com/send?text=${encodedText}`;
       break;
     case 'fb':
-      shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent('https://instagramstylebio.com')}&quote=${encodedText}`;
+      shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(currentLiveUrl)}&quote=${encodedText}`;
       break;
     case 'tg':
-      shareUrl = `https://t.me/share/url?url=${encodeURIComponent('https://instagramstylebio.com')}&text=${encodedText}`;
+      shareUrl = `https://t.me/share/url?url=${encodeURIComponent(currentLiveUrl)}&text=${encodedText}`;
       break;
     case 'tw':
       shareUrl = `https://twitter.com/intent/tweet?text=${encodedText}`;
@@ -639,6 +557,7 @@ document.getElementById('nameInput').addEventListener('keypress', e => {
   if (e.key === 'Enter') generateAll();
 });
 
+// Auto load layout content instantly
 renderGrid();
 </script>
 </body>
