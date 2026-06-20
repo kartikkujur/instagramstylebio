@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Instagram Bio Style Generator — BioStyle.in</title>
+<meta name="description" content="Free Instagram Bio Generator 2026 — Stylish bios with fancy fonts, symbols, and emojis for boys, girls, attitude, royal, VIP, love vibes.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ig-pink: #E1306C;
+    --ig-purple: #833AB4;
+    --ig-orange: #F77737;
+    --accent: #E1306C;
+    --accent-light: #fce4ec;
+    --surface: #ffffff;
+    --surface2: #f7f8f9;
+    --surface3: #f0f1f3;
+    --border: rgba(0,0,0,0.08);
+    --border-md: rgba(0,0,0,0.13);
+    --text: #111111;
+    --text2: #555560;
+    --text3: #999aaa;
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 16px;
+    --radius-xl: 24px;
+    --shadow-sm: 0 1px 4px rgba(0,0,0,0.07);
+    --shadow-md: 0 4px 16px rgba(0,0,0,0.09);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Inter', sans-serif; background: var(--surface2); color: var(--text); font-size: 15px; line-height: 1.6; }
+  a { text-decoration: none; color: inherit; }
+
+  /* ── NAVBAR ── */
+  .navbar {
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    padding: 0 24px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  .nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .nav-logo {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, var(--ig-purple), var(--ig-pink), var(--ig-orange));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+  }
+  .nav-title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--text);
+  }
+  .nav-links {
+    display: flex;
+    gap: 4px;
+    list-style: none;
+  }
+  .nav-links a {
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    color: var(--text2);
+    transition: all 0.15s;
+    font-weight: 500;
+  }
+  .nav-links a:hover { background: var(--surface3); color: var(--text); }
+  .nav-links a.active { background: var(--accent-light); color: var(--accent); }
+  @media (max-width: 600px) { .nav-links { display: none; } }
+
+  /* ── HERO ── */
+  .hero {
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    padding: 40px 24px 32px;
+    text-align: center;
+  }
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--accent-light);
+    color: var(--accent);
+    font-size: 12px;
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: 20px;
+    margin-bottom: 16px;
+    letter-spacing: 0.3px;
+  }
+  .hero h1 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(24px, 4vw, 36px);
+    font-weight: 700;
+    line-height: 1.25;
+    margin-bottom: 10px;
+    color: var(--text);
+  }
+  .hero h1 .accent { color: var(--accent); }
+  .hero p {
+    font-size: 14px;
+    color: var(--text2);
+    max-width: 480px;
+    margin: 0 auto 24px;
+    line-height: 1.7;
+  }
+
+  /* ── INPUT AREA ── */
+  .input-wrap {
+    max-width: 560px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    background: var(--surface2);
+    border: 1.5px solid var(--border-md);
+    border-radius: var(--radius-xl);
+    padding: 6px 6px 6px 18px;
+    transition: border-color 0.2s;
+  }
+  .input-wrap:focus-within {
+    border-color: var(--accent);
+    background: var(--surface);
+  }
+  .input-wrap input {
+    flex: 1;
+    border: none;
+    background: transparent;
+    outline: none;
+    font-size: 15px;
+    font-family: 'Inter', sans-serif;
+    color: var(--text);
+    min-width: 0;
+  }
+  .input-wrap input::placeholder { color: var(--text3); }
+  .gen-btn {
+    background: linear-gradient(135deg, var(--ig-purple), var(--ig-pink));
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    padding: 9px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: opacity 0.15s;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .gen-btn:hover { opacity: 0.88; }
+  .clear-btn {
+    background: transparent;
+    border: none;
+    color: var(--text3);
+    cursor: pointer;
+    padding: 6px 10px;
+    font-size: 16px;
+    line-height: 1;
+    border-radius: 50%;
+    transition: all 0.15s;
+    display: none;
+  }
+  .clear-btn.show { display: block; }
+  .clear-btn:hover { color: var(--text); background: var(--surface3); }
+
+  /* ── STATS ROW ── */
+  .stats-row {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    padding: 16px 24px;
+    background: var(--surface2);
+    border-bottom: 1px solid var(--border);
+  }
+  .stat { text-align: center; }
+  .stat-n { font-family: 'Space Grotesk', sans-serif; font-size: 20px; font-weight: 700; color: var(--text); }
+  .stat-l { font-size: 11px; color: var(--text3); margin-top: 1px; letter-spacing: 0.3px; }
+
+  /* ── CATEGORY TABS ── */
+  .cat-bar {
+    display: flex;
+    gap: 6px;
+    padding: 14px 20px;
+    overflow-x: auto;
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    scrollbar-width: none;
+  }
+  .cat-bar::-webkit-scrollbar { display: none; }
+  .cat-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 500;
+    border: 1px solid var(--border-md);
+    background: transparent;
+    color: var(--text2);
+    cursor: pointer;
+    white-space: nowrap;
+    font-family: 'Inter', sans-serif;
+    transition: all 0.15s;
+  }
+  .cat-pill:hover { background: var(--surface3); color: var(--text); }
+  .cat-pill.active {
+    background: var(--accent);
+    color: #fff;
+    border-color: var(--accent);
+  }
+  .cat-pill .dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: currentColor;
+    opacity: 0.7;
+  }
+
+  /* ── MAIN GRID ── */
+  .main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px 16px 60px;
+  }
+  .section-label {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.6px;
+    color: var(--text3);
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    padding: 0 4px;
+  }
+  .bio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 12px;
+    margin-bottom: 24px;
+  }
+
+  /* ── BIO CARD ── */
+  .bio-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    transition: border-color 0.15s, box-shadow 0.15s;
+    cursor: default;
+  }
+  .bio-card:hover {
+    border-color: var(--border-md);
+    box-shadow: var(--shadow-sm);
+  }
+  .bio-card-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 8px;
+  }
+  .cat-tag {
+    font-size: 10px;
+    font-weight: 600;
+    padding: 3px 9px;
+    border-radius: 10px;
+    letter-spacing: 0.3px;
+    flex-shrink: 0;
+  }
+  .tag-attitude { background: #fff3e0; color: #e65100; }
+  .tag-royal    { background: #ede7f6; color: #4527a0; }
+  .tag-love     { background: #fce4ec; color: #880e4f; }
+  .tag-vip      { background: #fff8e1; color: #f57f17; }
+  .tag-cute     { background: #e8f5e9; color: #1b5e20; }
+  .tag-sad      { background: #e3f2fd; color: #0d47a1; }
+  .tag-desi     { background: #fbe9e7; color: #bf360c; }
+  .tag-gym      { background: #e0f7fa; color: #006064; }
+
+  .fav-btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+    color: var(--text3);
+    padding: 2px 4px;
+    border-radius: 6px;
+    line-height: 1;
+    transition: all 0.15s;
+    flex-shrink: 0;
+  }
+  .fav-btn:hover { color: var(--accent); }
+  .fav-btn.liked { color: var(--accent); }
+
+  .bio-text {
+    font-size: 13px;
+    line-height: 1.75;
+    color: var(--text);
+    white-space: pre-line;
+    word-break: break-word;
+    flex: 1;
+    font-family: 'Space Grotesk', sans-serif;
+  }
+
+  .bio-card-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .char-count {
+    font-size: 11px;
+    color: var(--text3);
+  }
+  .copy-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    border: 1px solid var(--border-md);
+    background: transparent;
+    color: var(--text2);
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    transition: all 0.15s;
+  }
+  .copy-btn:hover { background: var(--surface3); color: var(--text); }
+  .copy-btn.copied { background: #e8f5e9; color: #1b5e20; border-color: #a5d6a7; }
+
+  /* ── LOAD MORE ── */
+  .load-more-wrap { text-align: center; margin-top: 8px; }
+  .load-more-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 10px 28px;
+    border-radius: 24px;
+    border: 1.5px solid var(--border-md);
+    background: var(--surface);
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text2);
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    transition: all 0.15s;
+  }
+  .load-more-btn:hover { background: var(--surface3); color: var(--text); border-color: var(--border-md); }
+
+  /* ── EMPTY STATE ── */
+  .empty-state {
+    text-align: center;
+    padding: 60px 20px;
+    color: var(--text2);
+  }
+  .empty-icon { font-size: 40px; margin-bottom: 12px; }
+  .empty-state p { font-size: 14px; }
+
+  /* ── HOW TO USE ── */
+  .how-section {
+    background: var(--surface);
+    border-top: 1px solid var(--border);
+    padding: 48px 24px;
+  }
+  .how-inner { max-width: 800px; margin: 0 auto; }
+  .how-title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 32px;
+  }
+  .steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 20px;
+  }
+  .step {
+    background: var(--surface2);
+    border-radius: var(--radius-md);
+    padding: 20px;
+    text-align: center;
+  }
+  .step-num {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--ig-purple), var(--ig-pink));
+    color: #fff;
+    font-size: 15px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 12px;
+    font-family: 'Space Grotesk', sans-serif;
+  }
+  .step h4 { font-size: 14px; font-weight: 600; margin-bottom: 6px; }
+  .step p { font-size: 12px; color: var(--text2); line-height: 1.6; }
+
+  /* ── FOOTER ── */
+  .footer {
+    background: #111;
+    color: rgba(255,255,255,0.6);
+    text-align: center;
+    padding: 24px;
+    font-size: 13px;
+  }
+  .footer a { color: rgba(255,255,255,0.8); }
+  .footer-brand {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 8px;
+  }
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="nav-brand">
+    <div class="nav-logo">📸</div>
+    <span class="nav-title">BioStyle.in</span>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#" class="active">Home</a></li>
+    <li><a href="#">Attitude Bio</a></li>
+    <li><a href="#">VIP Bio</a></li>
+    <li><a href="#">Love Bio</a></li>
+    <li><a href="#">Font Generator</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-badge">✨ Free — No signup needed</div>
+  <h1>Stylish <span class="accent">Instagram Bio</span><br>Generator 2026</h1>
+  <p>Apna naam likho aur instantly 50+ unique bios pao — fancy fonts, symbols aur emojis ke saath. Ek click mein copy karo!</p>
+
+  <div class="input-wrap" id="inputWrap">
+    <input type="text" id="nameInput" placeholder="Apna naam yahan likho..." maxlength="20" oninput="onInput(this.value)">
+    <button class="clear-btn" id="clearBtn" onclick="clearInput()" title="Clear">✕</button>
+    <button class="gen-btn" onclick="generateAll()">
+      <span>✦</span> Generate
+    </button>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats-row">
+  <div class="stat"><div class="stat-n">50+</div><div class="stat-l">Bio styles</div></div>
+  <div class="stat"><div class="stat-n">8</div><div class="stat-l">Categories</div></div>
+  <div class="stat"><div class="stat-n" id="favCount">0</div><div class="stat-l">Saved bios</div></div>
+</div>
+
+<!-- CATEGORY BAR -->
+<div class="cat-bar">
+  <button class="cat-pill active" onclick="filterCat('all', this)"><span class="dot"></span>All Bios</button>
+  <button class="cat-pill" onclick="filterCat('attitude', this)"><span class="dot"></span>🔥 Attitude</button>
+  <button class="cat-pill" onclick="filterCat('royal', this)"><span class="dot"></span>👑 Royal</button>
+  <button class="cat-pill" onclick="filterCat('love', this)"><span class="dot"></span>💕 Love</button>
+  <button class="cat-pill" onclick="filterCat('vip', this)"><span class="dot"></span>⭐ VIP</button>
+  <button class="cat-pill" onclick="filterCat('cute', this)"><span class="dot"></span>😊 Cute</button>
+  <button class="cat-pill" onclick="filterCat('desi', this)"><span class="dot"></span>🇮🇳 Desi</button>
+  <button class="cat-pill" onclick="filterCat('gym', this)"><span class="dot"></span>💪 Gym</button>
+  <button class="cat-pill" onclick="filterCat('sad', this)"><span class="dot"></span>🌙 Sad</button>
+  <button class="cat-pill" onclick="filterCat('fav', this)"><span>❤️</span> Saved</button>
+</div>
+
+<!-- MAIN -->
+<main class="main">
+  <div class="section-label" id="sectionLabel">All bio styles</div>
+  <div class="bio-grid" id="bioGrid"></div>
+  <div class="load-more-wrap" id="loadMoreWrap" style="display:none">
+    <button class="load-more-btn" onclick="loadMore()">⊕ &nbsp;Load more bios</button>
+  </div>
+  <div class="empty-state" id="emptyState" style="display:none">
+    <div class="empty-icon">🔍</div>
+    <p>Koi bio nahi mila. Dusri category try karo.</p>
+  </div>
+</main>
+
+<!-- HOW TO USE -->
+<section class="how-section">
+  <div class="how-inner">
+    <h2 class="how-title">Kaise use karein?</h2>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <h4>Naam likho</h4>
+        <p>Upar input box mein apna naam ya koi bhi text type karo.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <h4>Category chuno</h4>
+        <p>Attitude, Royal, Love ya VIP — jo vibe pasand ho woh select karo.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <h4>Copy karo</h4>
+        <p>Apni favourite bio par Copy button dabao — ek click mein copy ho jaata hai.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <h4>Instagram update karo</h4>
+        <p>Instagram profile mein jaao, Edit Profile → Bio mein paste karo aur save karo.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-brand">📸 BioStyle.in</div>
+  <p>© 2026 BioStyle.in — Free Instagram Bio Generator &nbsp;·&nbsp; <a href="#">Privacy Policy</a> &nbsp;·&nbsp; <a href="#">Contact Us</a></p>
+</footer>
+
+<script>
+const fontMaps = {
+  bold: {a:'𝗮',b:'𝗯',c:'𝗰',d:'𝗱',e:'𝗲',f:'𝗳',g:'𝗴',h:'𝗵',i:'𝗶',j:'𝗷',k:'𝗸',l:'𝗹',m:'𝗺',n:'𝗻',o:'𝗼',p:'𝗽',q:'𝗾',r:'𝗿',s:'𝘀',t:'𝘁',u:'𝘂',v:'𝘃',w:'𝘄',x:'𝘅',y:'𝘆',z:'𝘇',A:'𝗔',B:'𝗕',C:'𝗖',D:'𝗗',E:'𝗘',F:'𝗙',G:'𝗚',H:'𝗛',I:'𝗜',J:'𝗝',K:'𝗞',L:'𝗟',M:'𝗠',N:'𝗡',O:'𝗢',P:'𝗣',Q:'𝗤',R:'𝗥',S:'𝗦',T:'𝗧',U:'𝗨',V:'𝗩',W:'𝗪',X:'𝗫',Y:'𝗬',Z:'𝗭'},
+  italic: {a:'𝘢',b:'𝘣',c:'𝘤',d:'𝘥',e:'𝘦',f:'𝘧',g:'𝘨',h:'𝘩',i:'𝘪',j:'𝘫',k:'𝘬',l:'𝘭',m:'𝘮',n:'𝘯',o:'𝘰',p:'𝘱',q:'𝘲',r:'𝘳',s:'𝘴',t:'𝘵',u:'𝘶',v:'𝘷',w:'𝘸',x:'𝘹',y:'𝘺',z:'𝘻',A:'𝘈',B:'𝘉',C:'𝘊',D:'𝘋',E:'𝘌',F:'𝘍',G:'𝘎',H:'𝘏',I:'𝘐',J:'𝘑',K:'𝘒',L:'𝘓',M:'𝘔',N:'𝘕',O:'𝘖',P:'𝘗',Q:'𝘘',R:'𝘙',S:'𝘚',T:'𝘛',U:'𝘜',V:'𝘝',W:'𝘞',X:'𝘟',Y:'𝘠',Z:'𝘡'},
+  circle: {a:'ⓐ',b:'ⓑ',c:'ⓒ',d:'ⓓ',e:'ⓔ',f:'ⓕ',g:'ⓖ',h:'ⓗ',i:'ⓘ',j:'ⓙ',k:'ⓚ',l:'ⓛ',m:'ⓜ',n:'ⓝ',o:'ⓞ',p:'ⓟ',q:'ⓠ',r:'ⓡ',s:'ⓢ',t:'ⓣ',u:'ⓤ',v:'ⓥ',w:'ⓦ',x:'ⓧ',y:'ⓨ',z:'ⓩ',A:'Ⓐ',B:'Ⓑ',C:'Ⓒ',D:'Ⓓ',E:'Ⓔ',F:'Ⓕ',G:'Ⓖ',H:'Ⓗ',I:'Ⓘ',J:'Ⓙ',K:'Ⓚ',L:'Ⓛ',M:'Ⓜ',N:'Ⓝ',O:'Ⓞ',P:'Ⓟ',Q:'Ⓠ',R:'Ⓡ',S:'Ⓢ',T:'Ⓣ',U:'Ⓤ',V:'Ⓥ',W:'Ⓦ',X:'Ⓧ',Y:'Ⓨ',Z:'Ⓩ'},
+  smallcaps: {a:'ᴀ',b:'ʙ',c:'ᴄ',d:'ᴅ',e:'ᴇ',f:'ꜰ',g:'ɢ',h:'ʜ',i:'ɪ',j:'ᴊ',k:'ᴋ',l:'ʟ',m:'ᴍ',n:'ɴ',o:'ᴏ',p:'ᴘ',q:'Q',r:'ʀ',s:'ꜱ',t:'ᴛ',u:'ᴜ',v:'ᴠ',w:'ᴡ',x:'x',y:'ʏ',z:'ᴢ',A:'ᴀ',B:'ʙ',C:'ᴄ',D:'ᴅ',E:'ᴇ',F:'ꜰ',G:'ɢ',H:'ʜ',I:'ɪ',J:'ᴊ',K:'ᴋ',L:'ʟ',M:'ᴍ',N:'ɴ',O:'ᴏ',P:'ᴘ',Q:'Q',R:'ʀ',S:'ꜱ',T:'ᴛ',U:'ᴜ',V:'ᴠ',W:'ᴡ',X:'x',Y:'ʏ',Z:'ᴢ'}
+};
+
+function applyFont(text, map) {
+  return text.split('').map(c => map[c] || c).join('');
+}
+function getRandFont() {
+  const keys = Object.keys(fontMaps);
+  return fontMaps[keys[Math.floor(Math.random() * keys.length)]];
+}
+function styledName(n) { return applyFont(n, getRandFont()); }
+
+const bioTemplates = [
+  // ── ATTITUDE ──
+  { cat:'attitude', text: (n)=>`🔥 ${styledName(n)}\n👑 𝔎𝔦𝔫𝔫𝔤 𝔐𝔦𝔫𝔡𝔰𝔢𝔱 𝔒𝔫𝔩𝔶\n🎂 𝕭𝖔𝖗𝖓 𝖙𝖔 𝕾𝖍𝖎𝖓𝖊\n🎵 𝕄𝕦𝕤𝕚𝕔 = 𝕄𝕪 𝕃𝕚𝕗𝕖\n💪 𝓝𝓸 𝓕𝓪𝓴𝓮 𝓩𝓸𝓷𝓮 ✌️` },
+  { cat:'attitude', text: (n)=>`💥 ${styledName(n)} 💥\n😎 𝘉𝘢𝘥 𝘉𝘰𝘺 𝘝𝘪𝘣𝘦𝘴\n🎯 𝕭𝖔𝖗𝖓 𝕿𝖔 𝖂𝖎𝖓\n🏍️ 𝓡𝓲𝓭𝓮𝓻 𝓑𝔂 𝓟𝓪𝓼𝓼𝓲𝓸𝓷\n❌ 𝔑𝔬 𝔗𝔦𝔪𝔢 𝔉𝔬𝔯 𝔑𝔬𝔫𝔰𝔢𝔫𝔰𝔢` },
+  { cat:'attitude', text: (n)=>`⚡ ${styledName(n)}\n🦁 𝕃𝕚𝕠𝕟 𝕄𝕚𝕟𝕕𝕤𝕖𝕥\n🔥 𝔄𝔱𝔱𝔦𝔱𝔲𝔡𝔢 𝔒𝔫 𝔓𝔢𝔞𝔨\n📸 𝒫𝒽𝑜𝓉𝑜𝒽𝑜𝓁𝒾𝒸\n💯 𝕽𝖊𝖆𝖑 𝕺𝖓𝖊𝖘 𝕺𝖓𝖑𝖞` },
+  { cat:'attitude', text: (n)=>`👿 ${styledName(n)}\n🚫 𝓝𝓸 𝓛𝓸𝓿𝓮 𝓞𝓿𝓮𝓻 𝓖𝓸𝓪𝓵𝓼\n💀 𝔎𝔦𝔩𝔩𝔢𝔯 𝔄𝔱𝔱𝔦𝔱𝔲𝔡𝔢\n🎮 𝘎𝘢𝘮𝘦𝘳 𝘓𝘪𝘧𝘦\n🎧 𝕄𝕦𝕤压𝕔 𝔸𝕕𝕕压𝕔𝕥 🎶` },
+  { cat:'attitude', text: (n)=>`★彡 ${styledName(n)} 彡★\n😈 𝕯𝖆𝖓𝖌𝖊𝖗𝖔𝖚𝖘 𝕸𝖎𝖓𝖉\n🏋️ 𝔊𝔶𝔪 = 𝔓𝔬𝔴𝔢𝔯\n🚗 𝓒𝓪𝓻 𝓛𝓸𝓿𝓮𝓻\n🎵 𝔸𝕝𝕨𝕒𝕪𝕤 𝕆𝕟 𝔹𝕖𝕒𝕥 🎵` },
+
+  // ── ROYAL ──
+  { cat:'royal', text: (n)=>`👑 ${styledName(n)} 👑\n🌟 𝓡𝓸𝔂𝓪𝓵 𝓑𝓵𝓸𝓸𝓭\n🎂 𝔖𝔞𝔨𝔢 𝔇𝔞𝔶: 𝔖𝔬𝔬𝔫\n🎵 𝕸𝖚𝖘𝖎𝖈 𝕺𝖓 𝕽𝖊𝖕𝖊𝖆𝖙 🎶\n📸 𝘗𝘩𝘰𝘵𝘰𝘨𝘳𝘢𝘱𝘩𝘺 𝘓𝘰𝘷𝘦𝘳` },
+  { cat:'royal', text: (n)=>`꧁༒ ${styledName(n)} ༒꧂\n🏆 𝕹𝖆𝖜𝖆𝖇 𝕾𝖙𝖞𝖑𝖊\n💎 𝔹𝕠𝕣𝕟 ℝ𝕠𝕪𝕒𝕝\n🎶 𝔐𝔲𝔰𝔦𝔠 ℑ𝔰 𝔓𝔢𝔞𝔠𝔢\n❤️ 𝓓𝓲𝓵 𝓢𝓮 𝓢𝓲𝓶𝓹𝓵𝓮` },
+  { cat:'royal', text: (n)=>`🌹 ${styledName(n)} 🌹\n👑 𝔖𝔬𝔶𝔞𝔩 𝔄𝔱𝔱𝔦𝔱𝔲𝔡𝔢\n✨ 𝖀𝖓𝖎𝖖𝖚𝖊 𝕻𝖊𝖗𝖘𝖔𝖓𝖆𝖑𝖎𝖙𝖞\n📸 𝓒𝓵𝓲𝓬𝓴 𝓜𝓸𝓭𝓮 𝓞𝓝\n💯 𝕊𝕥𝕒𝕪 𝕆𝕣𝕚𝕘𝕚𝕟𝕒𝕝` },
+  { cat:'royal', text: (n)=>`⚜️ ${styledName(n)} ⚜️\n👑 𝘒𝘪𝘯𝘨 𝘖𝘧 𝘔𝘺 𝘞𝘰𝘳𝘭𝘥\n🎯 𝔇𝔯𝔢𝔞𝔪 𝔅𝔦𝔤 𝔄𝔩𝔴𝔞𝔶𝔰\n💎 𝕰𝖑𝖎𝖙𝖊 𝕮𝖑𝖆𝖘𝖘\n🌟 𝔹𝕠𝕣𝕟 𝕋𝕠 𝕃𝕖𝕒𝕕` },
+  { cat:'royal', text: (n)=>`▶ ${styledName(n)} ◀\n👑 𝓓𝓮𝓼𝓲 𝓡𝓸𝔂𝓪𝓵\n🎵 𝔐𝔲𝔰𝔦𝔠 𝔓𝔞𝔰𝔰𝔦𝔬𝔫 🎶\n📷 𝕾𝖍𝖔𝖔𝖙 𝕸𝖔𝖉𝖊\n💪 𝔽𝕚𝕥𝕟𝕖𝕤𝕤 𝔽𝕚𝕣𝕤𝕥 ⚡` },
+
+  // ── LOVE ──
+  { cat:'love', text: (n)=>`💕 ${styledName(n)} 💕\n🌸 𝕾𝖎𝖓𝖌𝖑𝖊 𝕭𝖚𝖙 𝕳𝖆𝖕𝖕𝖞 ✌️\n💌 𝔈𝔫𝔱𝔯𝔶 𝔇𝔞𝔱𝔢: 𝔖𝔬𝔬𝔫\n📸 𝓛𝓮𝓷𝓼 𝓛𝓸𝓿𝓮\n🎵 𝕄𝕦𝕤𝕚𝕔 𝔸𝕕𝕕𝕚𝕔𝕥 🎶` },
+  { cat:'love', text: (n)=>`💗 ${styledName(n)} 💗\n😍 𝔖𝔲𝔱𝔢 𝔅𝔲𝔱 𝔇𝔞𝔫𝔤𝔢𝔯𝔬𝔲𝔰\n💝 𝕷𝖔𝖛𝖊 𝕸𝖞 尝𝖎𝖋𝖊\n🌹 𝔹𝕠𝕣𝕟 𝕋𝕠 𝕃𝕠𝕧𝕖\n✨ 𝓢𝓽𝓪𝕪 𝓑𝓮𝓪𝓾𝓽𝓲𝓯𝓾𝓵` },
+  { cat:'love', text: (n)=>`🌷 ${styledName(n)} 🌷\n💞 𝘚𝘸𝘦𝘦𝘵 𝘚𝘰𝘶𝘭\n🎂 𝔖𝔞𝔨𝔢 𝔏𝔬𝔳𝔢𝔯\n🎵 𝓜𝓾𝓼𝓲𝓬 = 𝓣𝓱𝓮𝓻𝓪𝓹𝔂\n💕 𝕾𝖕𝖗𝖊𝖆𝖉 𝕷𝖔𝖛𝖊 𝕬𝖑𝖜𝖆𝖞𝖘` },
+  { cat:'love', text: (n)=>`❣️ ${styledName(n)} ❣️\n💖 𝕄𝕠𝕞 𝔻𝕒𝕕 = 𝔼𝕧𝕖𝕣𝕪𝕥𝕙𝕚𝕟𝕘\n🌸 𝔏𝔬𝔳𝔢 𝔐𝔶 𝔉𝔞𝔫𝔦𝔩𝔶\n📸 𝕸𝖊𝖒𝖔𝖗𝖎𝖊𝖘 𝕮𝖔𝖑𝖑𝖊𝕿𝖔𝖗\n🎶 𝓝𝓾𝓼𝓲𝓬 𝓘𝓷 𝓝𝔂 𝓑𝓵𝓸𝓸𝓭` },
+  { cat:'love', text: (n)=>`🫶 ${styledName(n)} 🫶\n💘 𝕭𝖔𝖗𝖓 𝕿𝖔 𝕭𝖊 𝕷𝖔𝖛𝖊𝖉\n🌹 ℌ𝔬𝔭𝔢𝔩𝔢𝔰𝔰 ℜ𝔬𝔪𝔞𝔫𝔱𝔦𝔠\n🎵 𝘓𝘰𝘷𝘦 𝘚𝘰𝘯𝘨𝘴 𝘖𝘯𝘭𝘺\n💕 𝓟𝓾𝓻𝓮 𝓗𝓮𝓪𝓻𝓽 ❤️` },
+
+  // ── VIP ──
+  { cat:'vip', text: (n)=>`⭐ 𝖁𝕴𝕻 ${styledName(n)} ⭐\n🏆 𝔑𝔞𝔪𝔢 = 𝔏𝔢𝔤𝔢𝔫𝔡\n💎 𝔼𝕝𝕚𝕥𝕖 𝕄𝕚𝕟𝕕𝕤𝕖𝕥\n🎯 𝓜𝔂 𝓡𝓾𝓵𝓮𝓼, 𝓜𝔂 𝓔𝓲𝓯𝓮\n🌟 𝘕𝘰 𝘖𝘳𝘥𝘪𝘯𝘢𝘳𝘺 𝘓𝘪𝘧𝘦` },
+  { cat:'vip', text: (n)=>`『𝖁𝕴𝕻』${styledName(n)}\n👑 𝕺𝖜𝖓 𝖂𝖔𝖗𝖑𝖉 𝕽𝖚𝖑𝖊𝖗\n💎 𝔓𝔯𝔢𝔪𝔦𝔲𝔪 𝔐𝔬𝔡𝔢 ©️\n🎵 𝓝𝓾𝓼𝓲𝓬 = 𝓝𝔂 𝓥𝓲𝓿𝓮\n📸 𝔸𝕝𝕨𝕒𝕪𝕤 𝕊𝕙𝕠𝕠𝕥𝕚𝕟𝕘 📷` },
+  { cat:'vip', text: (n)=>`✦ ${styledName(n)} ✦\n💼 𝔙ℑ𝔓 𝔈𝔫𝔱𝔯𝔶 𝔒𝔫𝔩𝔶\n🥂 𝕳𝖎𝖌𝖍 𝕰𝖓𝖉 尝𝖎𝖋𝖊\n🎯 𝓖𝓸𝓪𝓵𝓼 𝓞𝓿𝓮registered 𝓓𝓻𝓪𝓶𝓪\n🌟 𝘊𝘦𝘳𝘵𝘪𝘧𝘪𝘦𝘥 𝘓𝘦𝘨𝘦𝘯𝘥` },
+  { cat:'vip', text: (n)=>`⚜️ ${styledName(n)} ⚜️\n👔 ℂ𝕝𝕒𝕤𝕤 𝔸𝕡𝕒𝕣𝕥\n💎 𝔈𝔵𝔠𝔩𝔲𝔰𝔦𝔳𝔢 𝔙𝔦𝔟𝔢𝔰\n🏆 𝕭𝖔𝖗𝖓 𝕿𝖔 𝕯𝖔𝖒𝖎𝖓𝖆𝖙𝖊\n🎯 𝓔𝓵𝓲𝓽𝓮 𝓞𝓿𝓮𝓻 𝓩𝓸𝓷𝓮` },
+
+  // ── CUTE ──
+  { cat:'cute', text: (n)=>`🌸 ${styledName(n)} 🌸\n😊 𝔖𝔲𝔱𝔢 𝔅𝔲𝔱 𝔎𝔞𝔴𝔞𝔦𝔦\n🎂 𝕮𝖆𝖐𝖊 𝕯𝖆𝖞: 𝕾𝖔𝖔𝖓\n📸 ℂ𝕒𝕞𝕖𝕣𝕒 𝕃𝕠𝕧𝕖𝕣\n🌈 𝓢𝓶𝓲𝓵𝓮 𝓐𝓵𝔀𝓪𝓳𝓼 😄` },
+  { cat:'cute', text: (n)=>`🍭 ${styledName(n)} 🍭\n🐰 𝘚𝘸𝘦𝘦𝘵 𝘝𝘪𝘣𝘦𝘴\n🌺 𝔅𝔬𝔯𝔫 𝔖𝔲𝔱𝔢\n🎵 𝕸𝖚𝖘𝖎𝖈 𝕸𝖔𝖔𝖉 🎶\n☁️ 𝓗𝓪𝓹𝓹𝔂 𝓢𝓸𝓾𝓵 ✨` },
+  { cat:'cute', text: (n)=>`🌼 ${styledName(n)} 🌼\n🦋 𝔉𝔯𝔢𝔢 𝔖𝔭𝔦𝔯𝔦𝔱\n🍦 𝕀𝕔𝕖 ℂ𝕣𝕖𝕒𝕞 𝕃𝕠𝕧𝕖𝕣\n📸 𝓢𝓮𝓵𝓯𝓲𝓮 𝓜𝓸𝓭𝓮 𝓞𝓝\n💛 𝕻𝖔𝖘𝖎𝖙𝖎𝖛𝖊 𝖁𝖎𝖇𝖊𝖘 𝕺𝖓𝖑𝖞` },
+  { cat:'cute', text: (n)=>`🎀 ${styledName(n)} 🎀\n🐱 𝘊𝘢𝘵 𝘗𝘦𝘳𝘴𝘰𝘯\n🌸 𝔄𝔢𝔰𝔱𝔥𝔢𝔱𝔦𝔠 𝔏𝔦𝔣𝔢\n☕ 𝕮𝖔𝖋𝖋𝖊𝖊 𝕬𝖉𝖉𝖎𝖈𝖙\n🌟 𝓢𝓾𝓷𝓼𝓱𝓲𝓷𝓮 𝓐𝓵𝔀𝓪𝓳𝓼 ☀️` },
+  { cat:'cute', text: (n)=>`🌻 ${styledName(n)} 🌻\n🦄 𝕌𝕟𝕚𝕢𝕦𝕖 𝕊𝕠𝕦𝕝\n🍰 𝔖𝔞𝔨𝔢 𝔐𝔲𝔯𝔡𝔢𝔯𝔢𝔯 🎂\n🎧 𝘓𝘰-𝘧𝘪 𝘔𝘰𝘰𝘥\n💖 𝕶𝖎𝖓𝖉 𝕳𝖊𝖆𝖗𝖙 𝕬𝖑𝖜𝖆𝖞𝖘` },
+
+  // ── DESI ──
+  { cat:'desi', text: (n)=>`🙏 ${styledName(n)}\n🚩 𝔖𝔞𝔯 𝔖𝔞𝔯 𝔐𝔞𝔥𝔞𝔡𝔢𝔳\n🏏 𝕮𝖗𝖎𝖈𝖐𝖊𝖙 = 𝕻𝖆𝖘𝖘𝖎𝖔𝖓\n🎵 𝓓𝓮𝓼𝓲 𝓝𝓾𝓼𝓲𝓬 𝓕𝓪𝓿\n🌍 ℙ𝕣𝕠𝕦𝕕 𝕀𝕟𝕕𝕚𝕒𝕟 🇮🇳` },
+  { cat:'desi', text: (n)=>`🕉️ ${styledName(n)}\n🙏 𝔅𝔥𝔬𝔩𝔢 𝔅𝔥𝔞𝔨𝔱\n🍛 𝕲𝖍𝖆𝖗 𝕶𝖆 𝕶𝖍𝖆𝖓𝖆 𝕱𝖆𝖓\n🏏 𝘊𝘳𝘪𝘤𝘬𝘦𝘵 𝘓𝘰𝘷𝘦𝘳\n❤️ 𝓓ext𝓮𝓼𝓲 𝓢𝓸𝓾𝓵, 𝓡𝓸𝓿𝓪𝓵 𝓔𝓲𝓯𝓮` },
+  { cat:'desi', text: (n)=>`🇮🇳 ${styledName(n)} 🇮🇳\n🙏 𝔍𝔞𝔦 ℌ𝔦𝔫𝔡\n🏏 ℂ𝕣𝕚𝕔𝕜𝕖𝕥 𝕄𝕪 𝕃𝕚𝕗𝕖\n🍴 𝕱𝖔𝖔𝖉𝖎𝖊 𝖋𝖔𝖗𝖊𝖛𝖊𝖗\n🎵 𝓡𝓸𝓵𝓵𝔂𝔀𝓸𝓸𝓭 𝓝𝓾𝓼𝓲𝓬 🎶` },
+  { cat:'desi', text: (n)=>`💫 ${styledName(n)}\n🌾 𝔇𝔢𝔰𝔦 𝔖𝔴𝔞𝔤 𝔐𝔲𝔡𝔢\n🚜 BW𝖛𝖛𝖆𝖌𝖊 𝕻𝖗𝖔𝖚𝖉\n🏏 𝘊𝘳𝘪𝘤𝘬𝘦𝘵 𝘈𝘥𝘥𝘪𝘤𝘵\n🙏 𝔾𝕠𝕕 𝔽𝕚𝕣𝕤𝕥 𝔸𝕝𝕨𝕒𝕪𝕤` },
+  { cat:'desi', text: (n)=>`🔱 ${styledName(n)}\n🕉️ 𝔐𝔞𝔥𝔞𝔨𝔞𝔩 𝔅𝔥𝔞𝔨𝔱\n🇮🇳 𝕯𝖊𝖘𝖎 𝕭𝖞 𝕭𝖎𝖗𝖙𝖍\n🏍️ 𝓡𝓾𝓵𝓵𝓮𝓽 𝓡𝓲𝓭𝓮registered\n📿 𝔽𝕒𝕚𝕥𝕙 𝕆𝕧𝕖𝕣 𝔽𝕖𝕒𝕣` },
+
+  // ── GYM ──
+  { cat:'gym', text: (n)=>`💪 ${styledName(n)}\n🏋️ 𝔉𝔦𝔱𝔫𝔢𝔰𝔰 𝔄𝔡𝔡𝔦𝔠𝔱\n🥗 𝕰𝖆𝖙 𝕮𝖑𝖊𝖆𝖓, 𝕿𝖗𝖆𝖎𝖓 𝕸𝖊𝖆𝖓\n😤 ℙ𝕒𝕚𝕟 = 𝔾𝕒𝕚𝕟\n⚡ 𝓑𝓮𝓪𝓼𝓽 𝓜𝓸𝓭𝓮 𝓞𝓝` },
+  { cat:'gym', text: (n)=>`🏆 ${styledName(n)}\n💪 𝔊𝔶𝔪 = 𝔗𝔥𝔢𝔯𝔞𝔭𝔶\n🍗 𝕻𝖗𝖔𝖙𝖊𝖎𝖓 𝕭𝖗𝖔\n🔥 𝘕𝘰 𝘋𝘢𝘺𝘴 𝘖𝘧𝘧\n⚡ 𝔾𝕣𝕚𝕟𝕕 ℕ𝕖𝕧𝕖𝕣 𝕊𝕥𝕠𝕡𝕤` },
+  { cat:'gym', text: (n)=>`⚡ ${styledName(n)}\n🏋️ 𝕭𝖔𝖗𝖓 𝕷𝖎𝖋𝖙𝖊𝖗\n💪 𝔉𝔦𝔱𝔫𝔢𝔰𝔰 𝔉𝔦𝔯𝔰𝔱\n😤 𝘚𝘲𝘶𝘢𝘵. 𝘚𝘮𝘪𝘭𝘦. 𝘙𝘦𝘱𝘦𝘢𝘵.\n🏆 𝓒𝓱𝓪𝓶𝓹𝓲𝓸𝓷 𝓝𝓲𝓷𝓭𝓼𝓮𝓽` },
+  { cat:'gym', text: (n)=>`🥊 ${styledName(n)}\n💪 𝕊𝕥𝕣𝕖𝕟𝕘𝕥𝕙 𝕀𝕤 𝕃𝕚𝕗𝕖\n🏃 𝔐𝔬𝔯𝔫𝔦𝔫𝔤 𝔖𝔲𝔫𝔫𝔢𝔯\n🥗 𝕮𝖑𝖊𝖆𝖓 𝕰𝖆𝖙𝖎𝖓𝖌 𝕺𝖓𝖑𝖞\n🔥 𝓗𝓾𝓼𝓽𝓵𝓮 𝓔𝓿𝓮𝓻𝓳 𝓓𝓪𝓳` },
+
+  // ── SAD ──
+  { cat:'sad', text: (n)=>`🌙 ${styledName(n)}\n💔 𝔅𝔯𝔬𝔨𝔢𝔫 𝔅𝔲𝔱 𝔖𝔱𝔦𝔩𝔩\n🥀 𝕾𝖎𝖑𝖊𝖓𝖈𝖊 𝕴𝖘 𝕸𝖞 𝕸𝖔𝖔𝖉\n🎵 𝘚𝘢𝘥 𝘚𝘰𝘯𝘨𝘴 𝘏𝘪𝘵\n🌧️ 𝓔𝓶𝓸𝓽𝓲𝓸𝓷𝓼 𝓞𝓿𝓮𝓻𝓯𝓵𝓸𝔀` },
+  { cat:'sad', text: (n)=>`☁️ ${styledName(n)} ☁️\n🥀 𝔗𝔯𝔲𝔰𝔱 ℑ𝔰𝔰𝔲𝔢𝔰\n💭 𝕷𝖔𝖘𝖙 𝕴𝖓 𝕿𝖍𝖔𝖚𝖌𝖍𝖙𝖘\n🎧 𝕄𝕦𝕤𝕚𝕔 𝕊𝕒𝕧𝕖𝕤 𝕄𝕖\n🌙 𝓝𝓲𝓰𝓱𝓽 𝓟𝓮𝓻𝓼𝓸𝓷` },
+  { cat:'sad', text: (n)=>`🖤 ${styledName(n)}\n💔 𝔑𝔬𝔟𝔬𝔡𝔶 𝔘𝔫𝔡𝔢𝔯𝔰𝔱𝔞𝔫𝔡𝔰\n🌧️ 𝕽𝖆𝖎𝖓 𝕽𝖔𝖛𝖊𝖗\n🎵 𝘚𝘢𝘥 𝘔𝘶𝘴𝘪𝘤 𝘈𝘭𝘸𝘢𝘺𝘴\n🌙 𝓝𝓸𝓸𝓷 𝓘𝓼 𝓝𝔂 𝓕𝓻𝓲𝓮𝓷𝓭` },
+  { cat:'sad', text: (n)=>`🌑 ${styledName(n)}\n💀 𝕯𝖊𝖆𝖉 𝕴𝖓𝖘𝖎𝖉𝖊 𝕬𝖑𝖎𝖛𝖊\n🥀 𝔚𝔲𝔯𝔱 𝔗𝔬𝔬 𝔐𝔞𝔫𝔶 𝔗𝔦𝔪𝔢𝔰\n🎧 ℍ𝕖𝕒𝕕𝕓𝕒𝕟𝕕𝕤 = 𝔼𝕤𝕔𝕒𝕡𝕖\n🖤 𝓓𝓪𝓻𝓴 𝓥𝓲𝓿𝓮𝓼 𝓞𝓿𝓮𝓻` },
+];
+
+let currentCat = 'all';
+let visibleCount = 9;
+let favorites = new Set();
+let userName = 'Your Name';
+
+function filteredBios() {
+  if (currentCat === 'fav') {
+    return bioTemplates.filter((_, i) => favorites.has(i));
+  }
+  if (currentCat === 'all') return bioTemplates;
+  return bioTemplates.filter(b => b.cat === currentCat);
+}
+
+function renderGrid() {
+  const grid = document.getElementById('bioGrid');
+  const empty = document.getElementById('emptyState');
+  const wrap = document.getElementById('loadMoreWrap');
+  const label = document.getElementById('sectionLabel');
+  const list = filteredBios();
+
+  label.textContent = currentCat === 'all' ? 'All bio styles' :
+    currentCat === 'fav' ? `Saved bios (${favorites.size})` :
+    currentCat.charAt(0).toUpperCase() + currentCat.slice(1) + ' bios';
+
+  if (list.length === 0) {
+    grid.innerHTML = '';
+    empty.style.display = 'block';
+    wrap.style.display = 'none';
+    return;
+  }
+  empty.style.display = 'none';
+
+  const shown = list.slice(0, visibleCount);
+  grid.innerHTML = '';
+  shown.forEach((bio, idx) => {
+    const realIdx = bioTemplates.indexOf(bio);
+    const text = bio.text(userName);
+    const chars = text.length;
+    const isFav = favorites.has(realIdx);
+    const card = document.createElement('div');
+    card.className = 'bio-card';
+    card.innerHTML = `
+      <div class="bio-card-top">
+        <span class="cat-tag tag-${bio.cat}">${bio.cat}</span>
+        <button class="fav-btn ${isFav ? 'liked' : ''}" onclick="toggleFav(${realIdx})" title="Save">
+          ${isFav ? '❤️' : '🤍'}
+        </button>
+      </div>
+      <div class="bio-text">${text}</div>
+      <div class="bio-card-bottom">
+        <span class="char-count">${chars} chars</span>
+        <button class="copy-btn" onclick="copyBio(this, ${JSON.stringify(text)})">
+          📋 Copy
+        </button>
+      </div>`;
+    grid.appendChild(card);
+  });
+
+  wrap.style.display = list.length > visibleCount ? 'block' : 'none';
+}
+
+function toggleFav(idx) {
+  if (favorites.has(idx)) favorites.delete(idx);
+  else favorites.add(idx);
+  document.getElementById('favCount').textContent = favorites.size;
+  renderGrid();
+}
+
+function filterCat(cat, btn) {
+  currentCat = cat;
+  visibleCount = 9;
+  document.querySelectorAll('.cat-pill').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  renderGrid();
+}
+
+function loadMore() {
+  visibleCount += 9;
+  renderGrid();
+}
+
+function copyBio(btn, text) {
+  const area = document.createElement('textarea');
+  area.value = text;
+  area.style.position = 'absolute';
+  area.style.left = '-9999px';
+  document.body.appendChild(area);
+  area.select();
+  try {
+    document.execCommand('copy');
+    btn.textContent = '✓ Copied!';
+    btn.classList.add('copied');
+    setTimeout(() => {
+      btn.textContent = '📋 Copy';
+      btn.classList.remove('copied');
+    }, 2000);
+  } catch(e) {}
+  document.body.removeChild(area);
+}
+
+function generateAll() {
+  const val = document.getElementById('nameInput').value.trim();
+  userName = val || 'Your Name';
+  visibleCount = 9;
+  renderGrid();
+}
+
+function onInput(val) {
+  document.getElementById('clearBtn').classList.toggle('show', val.length > 0);
+  const v = val.trim();
+  userName = v || 'Your Name';
+  visibleCount = 9;
+  renderGrid();
+}
+
+function clearInput() {
+  document.getElementById('nameInput').value = '';
+  document.getElementById('clearBtn').classList.remove('remove');
+  userName = 'Your Name';
+  renderGrid();
+  document.getElementById('nameInput').focus();
+}
+
+document.getElementById('nameInput').addEventListener('keypress', e => {
+  if (e.key === 'Enter') generateAll();
+});
+
+renderGrid();
+</script>
+</body>
+</html>
